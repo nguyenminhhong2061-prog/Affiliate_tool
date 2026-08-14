@@ -1,0 +1,44 @@
+{
+  "name": "@affiliate/api",
+  "version": "1.0.0",
+  "description": "Backend API cho hệ thống Affiliate Tool",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "save-session": "ts-node src/scripts/saveSession.ts",
+    "test-real": "ts-node src/scripts/testRealTagging.ts",
+    "test-tag": "ts-node src/scripts/testTagVideo.ts",
+    "test-mobile": "ts-node src/scripts/testMobileCollectionTagging.ts",
+    "test-collections": "ts-node src/scripts/testShoppingCollections.ts",
+    "inspect-mobile": "ts-node src/scripts/inspectMobileSplash.ts",
+    "explore-collections": "ts-node src/scripts/exploreShoppingCollections.ts",
+    "check-adb": "ts-node src/scripts/checkAdb.ts",
+    "test-appium": "ts-node src/scripts/testAppium.ts",
+    "appium-server": "appium --port 4723"
+  },
+  "dependencies": {
+    "@bull-board/api": "^8.6.1",
+    "@bull-board/fastify": "^8.6.1",
+    "@fastify/cors": "^10.0.1",
+    "@wdio/appium-service": "^9.30.1",
+    "bullmq": "^6.1.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "fastify": "^5.0.0",
+    "ioredis": "^5.3.2",
+    "playwright": "^1.62.1",
+    "postgres": "^3.4.4",
+    "webdriverio": "^9.30.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "drizzle-kit": "^0.21.4",
+    "pino-pretty": "^11.2.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}

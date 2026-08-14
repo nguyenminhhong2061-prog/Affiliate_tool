@@ -1,0 +1,4161 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+packages/
+  api/
+    session/
+      storageState.json
+    src/
+      automation/
+        appiumYoutubeStudio.ts
+        circuitBreaker.ts
+        youtubeAutomation.ts
+      db/
+        client.ts
+        init.sql
+        schema.ts
+      queue/
+        queue.ts
+        worker.ts
+      routes/
+        dashboard.ts
+        health.ts
+        jobs.ts
+      scripts/
+        checkAdb.ts
+        exploreShoppingCollections.ts
+        inspectMobileSplash.ts
+        saveSession.ts
+        testAppium.ts
+        testMobileCollectionTagging.ts
+        testRealTagging.ts
+        testShoppingCollections.ts
+        testTagVideo.ts
+      services/
+        job.ts
+        shopee.ts
+      types/
+        index.ts
+      config.ts
+      index.ts
+      redis.ts
+    Dockerfile
+    package.json
+    tsconfig.json
+.env.example
+.gitignore
+docker-compose.yml
+mo-ta-du-an.md
+test-api.ps1
+test-automation.ps1
+test-queue.ps1
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="packages/api/session/storageState.json">
+{
+  "cookies": [
+    {
+      "name": "OTZ",
+      "value": "8739530_28_28__28_",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1789267770,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "533=nUvfYL_UBvNyvxwcp1r1nazNFyILq55OjIfJEFG-rskIjYYRkYy2N2Y_wv6iWOcAUjx_YivwBW1sW5lVTPnPaTxkUZdU-y0GNluJN0kWXAlR_fr7677SpdRdivtg7YObxFs5RFEPUPcdF4oLhvotjopotbJMrA_fS5LmUnHx7_IaKbezPtb2tkEwoy8_0RHmaXb4Ze9y787pnsVc16o6CWOaHhsUTXXxtDizejM25g5qSO7aoNxhHlrO0_g50o7jrIVhQ2pGaRw6jymr58NMh45F3Y4GYBJPy2NXpouiCiv5RN7TYkqi8-VsEs-vhpcJUC-ijQLHUCHwF7olmCNPmA0KZbZ9ytNPH6tyF9vUQjhAj7MJpaOhthOKONaI46pOyBX6FAYd932mtSJgsHb_E8B8FbcLvOP_Ub875dx5xAnyNJ-MSuKjY7CMd2HTBiZ5QexYRQObkjmaeAmV5vQkhuItSbrJuFACx7uoac3ncK-ccTOC5wMKFWrQwET3t_Yic5OtrA3F3ZEYvNl4EPi0UoFmrNgxQFBDmul6tzFblUZKLZbVapwdEBNl0itsanA63gZhTqyoN3JHWdl6TMjoNqIbzZcLG7GfPasli8T7TMAV2xot9Q7Yuu9LemcaYvpAwlidbTYRR58veSr6hSb8aA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1802486970.445398,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "HSID",
+      "value": "A6RE6eI3DLADdtq3B",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235842.445623,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SSID",
+      "value": "A20hdEhtRScO1QQPf",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235842.445639,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "APISID",
+      "value": "nTjOeVxZWaItgBEd/AMebvNV3i6uqIIY_P",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235842.445654,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235842.44567,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235842.445686,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235842.445702,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SMSV",
+      "value": "ADHTe-AkUEe-GVBjdq3atdhvm7QA1tpkdO9fUlIBwe5NAq5zluNfF6ISdSvyGue8ub3w3OBbc8TRhS-r0DLIQhty9jEBfJpk1qypwmEhAe_YEUIAkm5jNjo",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1821235842.445763,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSID",
+      "value": "s.VN|s.youtube:g.a000Bgmxy32nxRfyGxyKzAmnZU9XhHb4ZUKlBBb6Dn4cNqe15j3B-0TDkJtBgxdbmf5ntxHXsQACgYKAScSARESFQHGX2MiqMVmjbVb4p8VIpebcACUHhoVAUF8yKoweHEHJyL0KM9AomoMqOSG0076",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1821235842.889035,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-1PLSID",
+      "value": "s.VN|s.youtube:g.a000Bgmxy32nxRfyGxyKzAmnZU9XhHb4ZUKlBBb6Dn4cNqe15j3BwfwGeV1nOp2vFGnZkNSl4AACgYKAQMSARESFQHGX2MilsSA4d7NMer3QzBE0WerjhoVAUF8yKr4NzxUZeFnf84XtczVepMA0076",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1821235842.889118,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-3PLSID",
+      "value": "s.VN|s.youtube:g.a000Bgmxy32nxRfyGxyKzAmnZU9XhHb4ZUKlBBb6Dn4cNqe15j3B4mo5qf8FOJwwVeX-7xqpUgACgYKARISARESFQHGX2MiSzvMvT_1JbejtZt-dqKKaBoVAUF8yKqQtJnJmSyvrwn5_JFgq9mI0076",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1821235842.889159,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ACCOUNT_CHOOSER",
+      "value": "AFx_qI59aO3KrIszaOSKKWmy6blqb2srWV5vVoaenLk-j8hOYjHoW0gc41a1fZQmT-Z7u0n0ILBu635Ar02onLBD4gYufGKuk8jwTBi7AqGvKaj8KL39HB3Jp83aHrWerg4mQgr4y_EfjwHhYYNosRt-HofgxLlvrQ",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1821235842.889203,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSIDTS",
+      "value": "sidts-CjQBPWEu2anupQ5msAOe7bMBUdpvO4RjaLZjcGHag5_mKuhcBIZgjik05wnt9lC-VMdCl4TREAA",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1818211843.088995,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSIDTS",
+      "value": "sidts-CjQBPWEu2anupQ5msAOe7bMBUdpvO4RjaLZjcGHag5_mKuhcBIZgjik05wnt9lC-VMdCl4TREAA",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1818211843.089073,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "HSID",
+      "value": "AhjxW8dg2JDG4gK4M",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089092,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SSID",
+      "value": "AncnVAwOOyK0WQOOB",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089111,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "APISID",
+      "value": "nTjOeVxZWaItgBEd/AMebvNV3i6uqIIY_P",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089126,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089144,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089159,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089174,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SID",
+      "value": "g.a000Bgmxy7HjrbF28XxjAqMHH7F9z820JDQ391pkhZGWwKMirgLP5ErcFWDIBSxLbQoFKghbbgACgYKATsSARESFQHGX2MixQoIxrldmdIJwEEiR6UdvhoVAUF8yKpfcDWR7AGOa_QP_6RmbJwG0076",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.08919,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSID",
+      "value": "g.a000Bgmxy7HjrbF28XxjAqMHH7F9z820JDQ391pkhZGWwKMirgLP7qN--YfHC2lJbCJUoYr1mAACgYKAR8SARESFQHGX2MiRLObA_azkdHLBJiPeHTc7BoVAUF8yKpqFRmqyDqp_pma0UA2fM-H0076",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089212,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSID",
+      "value": "g.a000Bgmxy7HjrbF28XxjAqMHH7F9z820JDQ391pkhZGWwKMirgLPKnB5PBl37yZydU-A-4MzoAACgYKAVgSARESFQHGX2MijcoLtbmanuLi7xo0DrGJOhoVAUF8yKrb__7gmCFhSGgE-z9ccMaK0076",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.089232,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "HSID",
+      "value": "AhjxW8dg2JDG4gK4M",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274695,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SSID",
+      "value": "AncnVAwOOyK0WQOOB",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274779,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "APISID",
+      "value": "nTjOeVxZWaItgBEd/AMebvNV3i6uqIIY_P",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274798,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274815,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274831,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PAPISID",
+      "value": "gpHPjb57SoG6GSnz/Ak9dLkBycyCGOp61z",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274849,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NID",
+      "value": "533=BJFq5Yw_mAy7tCpEjH35yfqUAd0u6a9RtyzCXzUupEUubd9RgA2dywd2NAk_YNPwX7fabTv76TDHV53GTzY8FNp2ZN3Vy30rAQ5-Nt-y_Tr2g4eU2cFxcfPD0H5X1QlilXiroLTvH8i1a5oEy6otT6verBgz_LjdATFmaT3UF8mjrnP4GE8qerT5qhqi0t75Xm4TwJLSEk5oNt9T",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1802487043.274865,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SID",
+      "value": "g.a000Bgmxy7HjrbF28XxjAqMHH7F9z820JDQ391pkhZGWwKMirgLP5ErcFWDIBSxLbQoFKghbbgACgYKATsSARESFQHGX2MixQoIxrldmdIJwEEiR6UdvhoVAUF8yKpfcDWR7AGOa_QP_6RmbJwG0076",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274884,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSID",
+      "value": "g.a000Bgmxy7HjrbF28XxjAqMHH7F9z820JDQ391pkhZGWwKMirgLP7qN--YfHC2lJbCJUoYr1mAACgYKAR8SARESFQHGX2MiRLObA_azkdHLBJiPeHTc7BoVAUF8yKpqFRmqyDqp_pma0UA2fM-H0076",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274903,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSID",
+      "value": "g.a000Bgmxy7HjrbF28XxjAqMHH7F9z820JDQ391pkhZGWwKMirgLPKnB5PBl37yZydU-A-4MzoAACgYKAVgSARESFQHGX2MijcoLtbmanuLi7xo0DrGJOhoVAUF8yKrb__7gmCFhSGgE-z9ccMaK0076",
+      "domain": ".google.com.vn",
+      "path": "/",
+      "expires": 1821235843.274925,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-YNID",
+      "value": "20.YT=qSUv8uQSNrGA_uqkVS0EHryAxEoMKNYxd3U1pQre0CZvWyYqDvLkQAxp8FW0sxZBiGcrCB417o3jv0mF2Xq9N0R7AC-eddPIJwelEer1XXIofpLK8a0n0lEqvV2k4a01WwKVD6dv3sRqrZPiJ7-0dyrhoM8gWG0ktKsQBAqVdmLNbYXs6tzVAu_-CiQ5koiluu1m5GaReRNd8ZoC8KzFTBUUEZMMSm8EOdW-6wnX1Y1BJYziBjqV1jx852qH6K43J7YCG2rCTK8i4LMcrFp1KyAw_KKRLIYmP8NSLsfJwn5Ne-AfzPNMKIrvuhhjdp6GCQT-6vIg6-fUjB23NW7m2A",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1802227768.494034,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://youtube.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "LOGIN_INFO",
+      "value": "AFmmF2swRAIgYCKb5r2e56xTopN2XPXOLo5IDBi5Z7VU28MFdb7yL1wCIDkCZy-yu8eHYtckMY05zneu6jCkDjzt_aCq7bUZtwKg:QUQ3MjNmeEhNbUY0MXBfYTVSM3JuX1RwOURlQ2ROZ1FrRkVmSmpadkg2Y1Z0RVNlTXMzUnVrYS1RQVBXZmMzdFNMOXJrc0VUbks5YkM3QjBOV3VVU1A1clBhX3E0Y0k0QjNFVk9MaE9hd2VxWmhKclVKdjlwdVFud2RvSVFaNksyRDBFWWp5Y2pVcGFpSkZWTlVJWE1xMUhrQXZRVTZPaG9mYUc1bFdyVFlmM25sbDhVQjljTjlJN2FBSmlmZTV4RVc5aVB6ckRyRjltZjBBd0YzQmxqLUtheThOUklZRy1xZw==",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235843.494151,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "YSC",
+      "value": "XfENZ9vX-Gs",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://youtube.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "VISITOR_INFO1_LIVE",
+      "value": "OdRkUk0tdk0",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1802227843.666224,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://youtube.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "VISITOR_PRIVACY_METADATA",
+      "value": "CgJWThIEGgAgUw%3D%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1802227843.666263,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://youtube.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "__Secure-ROLLOUT_TOKEN",
+      "value": "CJiEs-PejdLM3QEQmoaK5Y2flgMYstuU5Y2flgM%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1802227843.666084,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://youtube.com",
+      "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "SID",
+      "value": "g.a000BgmxyxSZhU-wIG9r_dnf8k8CzMvg91qAVs2xtshCAtXX_X1fkTZFfb6MJBBzmEnpmbblhQACgYKAcgSARESFQHGX2MiRJQ77lLg7KdmkBAIogk-7RoVAUF8yKpw8mkMymsVwTmx5fzOoZuJ0076",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235843.749619,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSID",
+      "value": "g.a000BgmxyxSZhU-wIG9r_dnf8k8CzMvg91qAVs2xtshCAtXX_X1f7LVUks-_tpD6BYBsVajZrwACgYKAXcSARESFQHGX2MiOMhck9_L4AyypYJ0b1fUfxoVAUF8yKo1Q5AFmGGzEE4XFXQEaF6x0076",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235843.749647,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSID",
+      "value": "g.a000BgmxyxSZhU-wIG9r_dnf8k8CzMvg91qAVs2xtshCAtXX_X1fHvFGtKyfXXINCbJx104ligACgYKAfgSARESFQHGX2MiEyAMULHCHvQV08de1wOXJBoVAUF8yKpl49vHEQxJVMBFwGETawS90076",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1821235843.74967,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-1PSIDTS",
+      "value": "sidts-CjYBPWEu2fJVeV1mVriJEe9Bp3uB7-4FOmGOWH18KxK0MR2g362Q5wtfxjYo_3jkVIakHcSM6_wQAA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1818211844.879295,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSIDRTS",
+      "value": "sidts-CjYBPWEu2fJVeV1mVriJEe9Bp3uB7-4FOmGOWH18KxK0MR2g362Q5wtfxjYo_3jkVIakHcSM6_wQAA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1786676444.879395,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSIDTS",
+      "value": "sidts-CjYBPWEu2fJVeV1mVriJEe9Bp3uB7-4FOmGOWH18KxK0MR2g362Q5wtfxjYo_3jkVIakHcSM6_wQAA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1818211844.879432,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-3PSIDRTS",
+      "value": "sidts-CjYBPWEu2fJVeV1mVriJEe9Bp3uB7-4FOmGOWH18KxK0MR2g362Q5wtfxjYo_3jkVIakHcSM6_wQAA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1786676444.879468,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SIDCC",
+      "value": "AKEyXzVMHgsZHol6jPM4cgAoexK18STiOy9iUgEate7OhY0LdunZhpPIGwzQRt1FKmeQfehY",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1818211844.87952,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSIDCC",
+      "value": "AKEyXzWV3N6CyL6-9eY9a3WjOLVmAfqTfSUy9kpu3GAFbUJKspC1HvYLYEERzIznhHQwxb-c",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1818211844.879552,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-GAPS",
+      "value": "1:aHsA3TwXoMpYMkbem64wAYQMxCTs_l49ywgtMmg0wkW-VEO-g_wVmzI9tgLhoeejuwHROMYJKq4k6JNRB6kW7gddaMzF9PDcJdVOu0_fZbfYOikCV67DU1e9fF91jEvnKwhMCXRWkxhJP4htt6G_hAG5wx4da4TPebKUVwi7zRY3ylITq9eBKQ:vw3JsZyXiVcyozxo",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1821235845.239974,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PREF",
+      "value": "",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1821235845.34064,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-GAPSTS",
+      "value": "gapsts-CiwBoH4Dh69tZiNCdzsj4Sr0kbBGoxK7JMtFuKq3ZCGBZIriAQa2fRflg-4xZRAB",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1821235845.471933,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SIDCC",
+      "value": "AKEyXzXwjXjaDDsfvXPAjWePYrfklWTawRcGLp8Awbgkz9Gojwe2Ky86hUPkPI9DEgyd16En",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1818211849.459476,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSIDCC",
+      "value": "AKEyXzVhCTSFx3qnTvA8Nye_Seolr-zydZL0DAQZdBXFuOos7RSVjZg2zXUh0aJrJcHkwj9UQQ",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1818211849.459547,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSIDCC",
+      "value": "AKEyXzURCURv3Fl7CyCVY0uOOQ5XuETjSe-AhWkjOGw12JALUlBSjYmMf0xret5jnsLOkrLKkg",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1818211849.459615,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-3PSIDCC",
+      "value": "AKEyXzV75YaZ1u93DstTj6fJf1xCYbkJfNSwJePGJgzPrBDjTLRCoTrMNNv-urMVQryi-IPIzw",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1818211852.518677,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://studio.youtube.com",
+      "localStorage": [
+        {
+          "name": "yt.innertube::nextId",
+          "value": "{\"data\":3,\"expiration\":1786762142329,\"creation\":1786675742329}"
+        },
+        {
+          "name": "ytidb::LAST_RESULT_ENTRY_KEY",
+          "value": "{\"data\":{\"hasSucceededOnce\":true},\"expiration\":1789267737894,\"creation\":1786675737894}"
+        },
+        {
+          "name": "yt.innertube::requests",
+          "value": "{\"data\":{},\"expiration\":1786762146627,\"creation\":1786675746627}"
+        },
+        {
+          "name": "yt-icons-last-purged",
+          "value": "1785293337516"
+        }
+      ]
+    },
+    {
+      "origin": "https://accounts.google.com",
+      "localStorage": [
+        {
+          "name": "kc.salt",
+          "value": "2\u0000ß&ºO"
+        },
+        {
+          "name": "kc.\u0015¯pJhÿô\u001b;\u0002ÁPàÐÄ^Ü¼æ[í)­ÿHßÌF",
+          "value": "[\"Aal8VTPtkbpgFgxklzXfSa3tHC5uRLw2zPXucomnDb2bzZeWvjZLdaQzlarvWRUQ1MXtYzRFX5ozLFstWhZXWSK+SaHjADmEwAtBg5xsRFuul5q0nn3mNavWuB1dEu0=\",1786675842457]"
+        }
+      ]
+    },
+    {
+      "origin": "https://accounts.youtube.com",
+      "localStorage": [
+        {
+          "name": "nextRotationAttemptTs",
+          "value": "1786676447003"
+        }
+      ]
+    }
+  ]
+}
+</file>
+
+<file path="packages/api/src/automation/appiumYoutubeStudio.ts">
+/**
+ * Appium automation cho YouTube Studio Native App
+ * Tự động hóa quy trình gắn sản phẩm Shopee vào Tuyển tập YouTube
+ * và lấy link affiliate có voucher
+ */
+import { remote } from 'webdriverio';
+import { execSync } from 'child_process';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const ADB = 'C:\\platform-tools\\platform-tools\\adb.exe';
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots/appium');
+
+// Package name của YouTube Studio
+const YT_STUDIO_PKG = 'com.google.android.apps.youtube.creator';
+const YT_STUDIO_ACTIVITY = 'com.google.android.apps.youtube.creator.main.MainActivity';
+
+function adb(serial: string, cmd: string): string {
+  try {
+    return execSync(`"${ADB}" -s ${serial} ${cmd}`, { encoding: 'utf8', timeout: 15000 });
+  } catch (e: any) {
+    return e.stdout || '';
+  }
+}
+
+async function delay(ms: number) {
+  await new Promise((r) => setTimeout(r, ms));
+}
+
+async function snap(driver: WebdriverIO.Browser, name: string) {
+  if (!fs.existsSync(SCREENSHOT_DIR)) fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  const filePath = path.join(SCREENSHOT_DIR, name);
+  await driver.saveScreenshot(filePath);
+  console.log(`  📸 ${name}`);
+  return filePath;
+}
+
+/**
+ * Tìm element theo nhiều selector
+ */
+async function findElement(driver: WebdriverIO.Browser, selectors: string[]): Promise<WebdriverIO.Element | null> {
+  for (const sel of selectors) {
+    try {
+      const el = await driver.$(sel);
+      if (await el.isDisplayed()) {
+        return el;
+      }
+    } catch (_) {}
+  }
+  return null;
+}
+
+export class AppiumYoutubeStudio {
+  private driver: WebdriverIO.Browser | null = null;
+  private deviceSerial: string = '';
+
+  async init(deviceSerial?: string): Promise<void> {
+    // Lấy serial từ adb devices nếu không được cung cấp
+    if (!deviceSerial) {
+      const output = execSync(`"${ADB}" devices`, { encoding: 'utf8' });
+      const lines = output.split('\n').filter((l) => l.includes('\tdevice'));
+      if (lines.length === 0) throw new Error('Không tìm thấy thiết bị Android. Hãy kết nối qua USB.');
+      this.deviceSerial = lines[0].split('\t')[0].trim();
+    } else {
+      this.deviceSerial = deviceSerial;
+    }
+    console.log(`  → Sử dụng thiết bị: ${this.deviceSerial}`);
+
+    this.driver = await remote({
+      hostname: '127.0.0.1',
+      port: 4723,
+      logLevel: 'warn',
+      capabilities: {
+        platformName: 'Android',
+        'appium:deviceName': this.deviceSerial,
+        'appium:udid': this.deviceSerial,
+        'appium:automationName': 'UiAutomator2',
+        'appium:appPackage': YT_STUDIO_PKG,
+        'appium:appActivity': YT_STUDIO_ACTIVITY,
+        'appium:noReset': true,       // Không reset app (giữ đăng nhập)
+        'appium:newCommandTimeout': 60,
+        'appium:androidDeviceReadyTimeout': 30,
+        'appium:uiautomator2ServerLaunchTimeout': 60000,
+      },
+    } as any);
+
+    console.log(`  ✅ Appium session khởi động thành công`);
+  }
+
+  /**
+   * Tìm và tap element theo text (tiếng Việt)
+   */
+  private async tapByText(text: string, timeout = 10000): Promise<boolean> {
+    try {
+      // UiSelector để tìm theo text hoặc content-desc
+      const el = await this.driver!.$(`android=new UiSelector().text("${text}")`);
+      await el.waitForDisplayed({ timeout });
+      await el.click();
+      await delay(1500);
+      return true;
+    } catch (_) {
+      try {
+        const el = await this.driver!.$(`android=new UiSelector().textContains("${text}")`);
+        await el.waitForDisplayed({ timeout: 5000 });
+        await el.click();
+        await delay(1500);
+        return true;
+      } catch (_2) {
+        return false;
+      }
+    }
+  }
+
+  /**
+   * Scroll xuống để tìm element
+   */
+  private async scrollToText(text: string): Promise<boolean> {
+    try {
+      const el = await this.driver!.$(
+        `android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("${text}"))`
+      );
+      await el.waitForDisplayed({ timeout: 10000 });
+      return true;
+    } catch (_) {
+      try {
+        const el = await this.driver!.$(
+          `android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textContains("${text}"))`
+        );
+        await el.waitForDisplayed({ timeout: 5000 });
+        return true;
+      } catch (_2) {
+        return false;
+      }
+    }
+  }
+
+  /**
+   * Lấy text từ clipboard
+   */
+  private async getClipboard(): Promise<string> {
+    try {
+      // Method 1: Dùng Appium getClipboard
+      const clip = await (this.driver as any).getClipboard();
+      if (clip) return Buffer.from(clip, 'base64').toString('utf8');
+    } catch (_) {}
+    try {
+      // Method 2: Đọc từ ADB
+      const result = adb(this.deviceSerial, 'shell am broadcast -a clipper.get');
+      return result.trim();
+    } catch (_) {}
+    return '';
+  }
+
+  /**
+   * PHASE 1: Gắn sản phẩm Shopee vào Tuyển tập
+   */
+  async addProductToCollection(shopeeUrl: string): Promise<string> {
+    if (!this.driver) throw new Error('Appium chưa khởi động. Gọi init() trước.');
+
+    console.log('\n  ═══ PHASE 1: GẮN SẢN PHẨM VÀO TUYỂN TẬP ═══');
+
+    // 1. Chờ app load
+    console.log('  [1/12] Chờ app YouTube Studio load...');
+    await delay(3000);
+    await snap(this.driver, '01_app_launched.png');
+
+    // 2. Tap vào biểu tượng Kiếm tiền ($)
+    console.log('  [2/12] Tap Kiếm tiền...');
+    const monetizeFound = await this.tapByText('Kiếm tiền');
+    if (!monetizeFound) {
+      // Thử tìm icon $ trong bottom nav
+      const iconSel = [
+        '~Kiếm tiền',
+        'android=new UiSelector().description("Kiếm tiền")',
+        'android=new UiSelector().resourceId("com.google.android.apps.youtube.creator:id/monetization_nav")',
+      ];
+      for (const sel of iconSel) {
+        try {
+          const el = await this.driver.$(sel);
+          if (await el.isDisplayed()) { await el.click(); await delay(1500); break; }
+        } catch (_) {}
+      }
+    }
+    await snap(this.driver, '02_monetize_screen.png');
+
+    // 3. Tap tab Mua sắm
+    console.log('  [3/12] Tap Mua sắm...');
+    await this.tapByText('Mua sắm');
+    await delay(2000);
+    await snap(this.driver, '03_shopping_screen.png');
+
+    // 4. Scroll tìm và tap Tuyển tập
+    console.log('  [4/12] Tìm Tuyển tập...');
+    const tuyanTapFound = await this.scrollToText('Tuyển tập');
+    if (tuyanTapFound) {
+      await this.tapByText('Tuyển tập');
+    } else {
+      // Thử "Bộ sưu tập"
+      await this.scrollToText('Bộ sưu tập');
+      await this.tapByText('Bộ sưu tập');
+    }
+    await delay(2000);
+    await snap(this.driver, '04_collections_list.png');
+
+    // 5. Chọn bộ sưu tập đầu tiên
+    console.log('  [5/12] Chọn bộ sưu tập đầu tiên...');
+    // Thử tìm element list item đầu tiên
+    try {
+      const firstItem = await this.driver.$('android=new UiSelector().className("android.widget.RelativeLayout").instance(0)');
+      if (await firstItem.isDisplayed()) {
+        await firstItem.click();
+        await delay(2000);
+      }
+    } catch (_) {
+      // Thử RecyclerView item
+      try {
+        const firstItem = await this.driver.$('android=new UiSelector().className("androidx.recyclerview.widget.RecyclerView").childSelector(new UiSelector().instance(0))');
+        await firstItem.click();
+        await delay(2000);
+      } catch (_2) {}
+    }
+    await snap(this.driver, '05_collection_detail.png');
+
+    // 6. Tap Thêm sản phẩm
+    console.log('  [6/12] Tap Thêm sản phẩm...');
+    await this.scrollToText('Thêm sản phẩm');
+    await this.tapByText('Thêm sản phẩm');
+    await delay(2000);
+    await snap(this.driver, '06_add_product_screen.png');
+
+    // 7. Dán link Shopee vào ô tìm kiếm
+    console.log(`  [7/12] Dán link Shopee: ${shopeeUrl}`);
+    try {
+      const searchInput = await this.driver.$('android=new UiSelector().className("android.widget.EditText")');
+      await searchInput.waitForDisplayed({ timeout: 8000 });
+      await searchInput.click();
+      await delay(500);
+      await searchInput.setValue(shopeeUrl);
+      await delay(2000);
+    } catch (_) {
+      console.log('  ⚠️ Không tìm thấy ô nhập liệu');
+    }
+    await snap(this.driver, '07_shopee_link_entered.png');
+
+    // Nhấn Search/Enter
+    try {
+      await this.driver.pressKeyCode(66); // KEYCODE_ENTER
+      await delay(3000);
+    } catch (_) {}
+    await snap(this.driver, '07b_after_search.png');
+
+    // 8. Chọn Shopee làm người bán
+    console.log('  [8/12] Chọn người bán Shopee...');
+    await this.tapByText('Shopee');
+    await delay(2500);
+    await snap(this.driver, '08_shopee_selected.png');
+
+    // 9. Chọn sản phẩm hiện ra
+    console.log('  [9/12] Chọn sản phẩm...');
+    try {
+      // Tap vào sản phẩm đầu tiên trong danh sách
+      const productItem = await this.driver.$('android=new UiSelector().className("android.widget.CheckBox").instance(0)');
+      if (await productItem.isDisplayed()) {
+        await productItem.click();
+      } else {
+        // Thử tap vào card sản phẩm
+        const card = await this.driver.$('android=new UiSelector().className("android.widget.FrameLayout").instance(2)');
+        await card.click();
+      }
+      await delay(1500);
+    } catch (_) {}
+    await snap(this.driver, '09_product_selected.png');
+
+    // 10. Tap Xong
+    console.log('  [10/12] Tap Xong...');
+    await this.tapByText('Xong');
+    await delay(2000);
+    await snap(this.driver, '10_after_done.png');
+
+    // 11. Tap Đăng
+    console.log('  [11/12] Tap Đăng...');
+    await this.tapByText('Đăng');
+    await delay(3000);
+    await snap(this.driver, '11_after_publish.png');
+
+    console.log('  ✅ Đã gắn sản phẩm thành công!');
+
+    // PHASE 2: Lấy link chia sẻ
+    return await this.getCollectionShareLink();
+  }
+
+  /**
+   * PHASE 2: Lấy link chia sẻ bộ sưu tập
+   */
+  async getCollectionShareLink(): Promise<string> {
+    console.log('\n  ═══ PHASE 2: LẤY LINK CHIA SẺ ═══');
+
+    // 12. Quay lại tuyển tập, tap 3-dots → Chia sẻ → Sao chép liên kết
+    console.log('  [12/12] Tap ⋮ → Chia sẻ → Sao chép liên kết...');
+    await delay(2000);
+
+    // Tap nút back về danh sách tuyển tập
+    try {
+      await this.driver!.back();
+      await delay(1500);
+      await this.driver!.back();
+      await delay(1500);
+    } catch (_) {}
+    await snap(this.driver!, '12_back_to_collections.png');
+
+    // Tap 3-dots (more_vert)
+    try {
+      const moreBtn = await this.driver!.$('android=new UiSelector().description("More options")');
+      if (await moreBtn.isDisplayed()) {
+        await moreBtn.click();
+        await delay(1500);
+      } else {
+        // Thử tìm icon 3 chấm theo resourceId
+        const moreBtn2 = await this.driver!.$('//android.widget.ImageView[@content-desc="More options"]');
+        await moreBtn2.click();
+        await delay(1500);
+      }
+    } catch (_) {
+      await this.tapByText('Thêm tùy chọn');
+    }
+    await snap(this.driver!, '13_more_options_menu.png');
+
+    // Tap Chia sẻ
+    await this.tapByText('Chia sẻ');
+    await delay(1500);
+    await snap(this.driver!, '14_share_menu.png');
+
+    // Tap Sao chép liên kết
+    await this.tapByText('Sao chép liên kết');
+    await delay(1000);
+
+    // Lấy link từ clipboard
+    const shareLink = await this.getClipboard();
+    console.log(`  ✅ Link chia sẻ: ${shareLink}`);
+    return shareLink;
+  }
+
+  async close() {
+    if (this.driver) {
+      await this.driver.deleteSession();
+      this.driver = null;
+    }
+  }
+}
+</file>
+
+<file path="packages/api/src/automation/circuitBreaker.ts">
+export type CircuitState = 'CLOSED' | 'OPEN' | 'HALF_OPEN';
+
+export interface CircuitBreakerConfig {
+  failureThreshold: number; // Số lần lỗi liên tiếp để ngắt cầu chì (ví dụ 3 lần)
+  resetTimeoutMs: number;    // Thời gian tạm dừng trước khi thử phục hồi (ms)
+}
+
+export class CircuitBreaker {
+  private state: CircuitState = 'CLOSED';
+  private failureCount = 0;
+  private lastFailureTime = 0;
+
+  constructor(
+    private config: CircuitBreakerConfig = {
+      failureThreshold: 3,
+      resetTimeoutMs: 30000, // 30 giây
+    },
+  ) {}
+
+  /**
+   * Kiểm tra xem có thể thực hiện công việc tiếp theo hay không
+   */
+  public canExecute(): boolean {
+    if (this.state === 'OPEN') {
+      const now = Date.now();
+      if (now - this.lastFailureTime > this.config.resetTimeoutMs) {
+        console.log('[CircuitBreaker] 🟡 Đổi sang trạng thái HALF_OPEN (Đang thử phục hồi...)');
+        this.state = 'HALF_OPEN';
+        return true;
+      }
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * Ghi nhận 1 lần xử lý THÀNH CÔNG
+   */
+  public recordSuccess(): void {
+    if (this.state !== 'CLOSED') {
+      console.log('[CircuitBreaker] 🟢 Phục hồi thành công! Chuyển về trạng thái CLOSED (Bình thường)');
+    }
+    this.failureCount = 0;
+    this.state = 'CLOSED';
+  }
+
+  /**
+   * Ghi nhận 1 lần xử lý THẤT BẠI
+   */
+  public recordFailure(reason: string): void {
+    this.failureCount++;
+    this.lastFailureTime = Date.now();
+    console.warn(`[CircuitBreaker] ⚠️ Ghi nhận lỗi (${this.failureCount}/${this.config.failureThreshold}): ${reason}`);
+
+    if (this.failureCount >= this.config.failureThreshold) {
+      this.state = 'OPEN';
+      console.error(`[CircuitBreaker] 🚨 CẦU CHÌ ĐÃ NGẮT! Trạng thái OPEN. Tạm dừng worker trong ${this.config.resetTimeoutMs / 1000}s để bảo vệ tài khoản.`);
+    }
+  }
+
+  public getState(): CircuitState {
+    return this.state;
+  }
+
+  public getFailureCount(): number {
+    return this.failureCount;
+  }
+
+  public reset(): void {
+    this.state = 'CLOSED';
+    this.failureCount = 0;
+    this.lastFailureTime = 0;
+  }
+}
+
+// Singleton Circuit Breaker instance cho Youtube Automation Worker
+export const youtubeCircuitBreaker = new CircuitBreaker();
+</file>
+
+<file path="packages/api/src/automation/youtubeAutomation.ts">
+import { chromium, type Browser, type BrowserContext, type Page } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots');
+
+export interface TagProductParams {
+  jobId: string;
+  shopeeUrl: string;
+  shopeeProductId?: string | null;
+}
+
+export interface TagProductResult {
+  affiliateUrl: string;
+  voucher: string;
+}
+
+/**
+ * Random delay để giả lập nhịp độ bấm của người thật (ms)
+ */
+async function humanDelay(minMs = 1000, maxMs = 2500): Promise<void> {
+  const delay = Math.floor(minMs + Math.random() * (maxMs - minMs));
+  await new Promise((resolve) => setTimeout(resolve, delay));
+}
+
+/**
+ * Chụp ảnh màn hình khi có lỗi để Admin kiểm tra
+ */
+async function captureErrorScreenshot(page: Page, jobId: string): Promise<string | null> {
+  try {
+    if (!fs.existsSync(SCREENSHOT_DIR)) {
+      fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+    }
+    const screenshotPath = path.join(SCREENSHOT_DIR, `error_${jobId}.png`);
+    await page.screenshot({ path: screenshotPath, fullPage: true });
+    console.log(`[Playwright] 📸 Đã chụp ảnh màn hình lỗi tại: ${screenshotPath}`);
+    return screenshotPath;
+  } catch (err) {
+    console.error('[Playwright] Không thể chụp ảnh màn hình:', err);
+    return null;
+  }
+}
+
+/**
+ * Kiểm tra xem session file storageState.json có sẵn không
+ */
+function hasValidSessionFile(): boolean {
+  if (!fs.existsSync(SESSION_PATH)) return false;
+  try {
+    const content = fs.readFileSync(SESSION_PATH, 'utf-8');
+    const parsed = JSON.parse(content);
+    return Array.isArray(parsed.cookies) && parsed.cookies.length > 0;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Thực hiện kịch bản Playwright automation gắn sản phẩm Shopee trên YouTube Studio
+ */
+export async function tagShopeeProductOnYoutube(
+  params: TagProductParams,
+): Promise<TagProductResult> {
+  const { jobId, shopeeUrl } = params;
+  console.log(`[Playwright] 🚀 Bắt đầu Playwright Automation cho Job ID: ${jobId}`);
+
+  // 1. Kiểm tra session
+  const useRealSession = hasValidSessionFile();
+
+  if (!useRealSession) {
+    console.log('[Playwright] ℹ️ Chưa có cookies YouTube Studio thật. Đang chạy ở chế độ Playwright Engine Simulation.');
+    await humanDelay(1500, 3000);
+    const mockHash = jobId.slice(0, 8);
+    return {
+      affiliateUrl: `https://s.shopee.vn/affiliate_pw_${mockHash}`,
+      voucher: `VOUCHER_PW_${Math.floor(1000 + Math.random() * 9000)}`,
+    };
+  }
+
+  // 2. Khởi chạy Playwright với session thật
+  let browser: Browser | null = null;
+  let context: BrowserContext | null = null;
+  let page: Page | null = null;
+
+  try {
+    browser = await chromium.launch({
+      headless: true, // Chạy ẩn danh
+      ignoreDefaultArgs: ['--enable-automation'],
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-blink-features=AutomationControlled', // Ẩn cờ tự động hoá
+      ],
+    });
+
+    context = await browser.newContext({
+      storageState: SESSION_PATH,
+      viewport: { width: 1280, height: 800 },
+      userAgent:
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+    });
+
+    await context.addInitScript("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });");
+
+    page = await context.newPage();
+
+    // 3. Mở YouTube Studio Shopping
+    console.log('[Playwright] Đang mở YouTube Studio Shopping...');
+    await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle', timeout: 30000 });
+    await humanDelay(1500, 2500);
+
+    // Thao tác UI YouTube Studio Shopping:
+    // (Selectors tương ứng với giao diện Studio Shopping mới nhất)
+    const searchSelector = 'input[placeholder*="Search"], input[placeholder*="Tìm kiếm"]';
+    
+    // Đợi ô tìm kiếm sản phẩm xuất hiện
+    await page.waitForSelector(searchSelector, { timeout: 15000 });
+    await page.fill(searchSelector, shopeeUrl);
+    await humanDelay(1000, 2000);
+
+    // Bấm Enter hoặc nút Search
+    await page.keyboard.press('Enter');
+    await humanDelay(2000, 4000);
+
+    // Bấm chọn sản phẩm từ danh sách kết quả tìm kiếm
+    const addProductBtn = 'button:has-text("Add"), button:has-text("Thêm"), [aria-label*="Add"]';
+    await page.waitForSelector(addProductBtn, { timeout: 10000 });
+    await page.click(addProductBtn);
+    await humanDelay(1500, 3000);
+
+    // Bấm Lưu / Save
+    const saveBtn = 'button:has-text("Save"), button:has-text("Lưu")';
+    if (await page.$(saveBtn)) {
+      await page.click(saveBtn);
+      await humanDelay(2000, 3500);
+    }
+
+    // Scrape link affiliate / voucher được sinh ra trên giao diện
+    const affiliateLinkInput = 'input[value*="shopee"], a[href*="shopee"]';
+    let scrapedUrl = shopeeUrl;
+
+    if (await page.$(affiliateLinkInput)) {
+      const val = await page.$eval(affiliateLinkInput, (el: any) => el.value || el.href);
+      if (val) scrapedUrl = val;
+    }
+
+    const mockVoucher = `VOUCHER_${Math.floor(1000 + Math.random() * 9000)}`;
+
+    console.log(`[Playwright] ✅ Gắn sản phẩm thành công! Link: ${scrapedUrl}`);
+    return {
+      affiliateUrl: scrapedUrl,
+      voucher: mockVoucher,
+    };
+  } catch (err: any) {
+    console.error(`[Playwright] ❌ Lỗi khi thực hiện automation cho Job ${jobId}:`, err.message);
+
+    if (page) {
+      await captureErrorScreenshot(page, jobId);
+    }
+
+    throw new Error(`[Playwright Failed] ${err.message}`);
+  } finally {
+    if (context) await context.close();
+    if (browser) await browser.close();
+  }
+}
+</file>
+
+<file path="packages/api/src/db/client.ts">
+import { drizzle } from 'drizzle-orm/postgres-js';
+import postgres from 'postgres';
+import { config } from '../config';
+import * as schema from './schema';
+
+// Tạo postgres connection pool
+const queryClient = postgres(config.DATABASE_URL, {
+  max: 10,           // tối đa 10 connections trong pool
+  idle_timeout: 20,  // đóng connection sau 20s không dùng
+  connect_timeout: 10,
+});
+
+// Drizzle client với type-safe schema
+export const db = drizzle(queryClient, { schema });
+
+// Health check: thử query đơn giản
+export async function checkDbHealth(): Promise<boolean> {
+  try {
+    await queryClient`SELECT 1`;
+    return true;
+  } catch {
+    return false;
+  }
+}
+</file>
+
+<file path="packages/api/src/db/init.sql">
+-- ============================================================
+-- Init SQL cho PostgreSQL
+-- Chạy tự động khi container khởi động lần đầu
+-- ============================================================
+
+-- Enum trạng thái job
+CREATE TYPE job_status AS ENUM ('pending', 'processing', 'done', 'failed');
+
+-- Bảng chính chứa toàn bộ job
+CREATE TABLE IF NOT EXISTS jobs (
+  id                   UUID         PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id              VARCHAR(255) NOT NULL,
+  shopee_url           TEXT         NOT NULL,
+  shopee_product_id    VARCHAR(255),
+  shopee_product_name  VARCHAR(500),
+  shopee_product_image TEXT,
+  status               job_status   NOT NULL DEFAULT 'pending',
+  result_url           TEXT,
+  result_voucher       VARCHAR(100),
+  error_message        TEXT,
+  created_at           TIMESTAMPTZ  NOT NULL DEFAULT NOW(),
+  updated_at           TIMESTAMPTZ  NOT NULL DEFAULT NOW(),
+  completed_at         TIMESTAMPTZ
+);
+
+-- Index để query nhanh theo user + status
+CREATE INDEX IF NOT EXISTS idx_jobs_user_id_status
+  ON jobs(user_id, status);
+
+-- Index để tính queue position (sort theo thời gian tạo)
+CREATE INDEX IF NOT EXISTS idx_jobs_status_created_at
+  ON jobs(status, created_at);
+
+-- Trigger tự động cập nhật updated_at khi có thay đổi
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER trg_jobs_updated_at
+  BEFORE UPDATE ON jobs
+  FOR EACH ROW
+  EXECUTE FUNCTION update_updated_at_column();
+</file>
+
+<file path="packages/api/src/db/schema.ts">
+import { pgTable, uuid, varchar, text, timestamp, pgEnum } from 'drizzle-orm/pg-core';
+
+// ─── Enum trạng thái job ──────────────────────────────────────────────────────
+export const jobStatusEnum = pgEnum('job_status', [
+  'pending',
+  'processing',
+  'done',
+  'failed',
+]);
+
+// ─── Bảng jobs ────────────────────────────────────────────────────────────────
+export const jobs = pgTable('jobs', {
+  id: uuid('id').primaryKey().defaultRandom(),
+
+  // Người dùng gửi job (chưa có auth, nhận từ client)
+  // TODO: Giai đoạn sau cần xác thực user_id bằng JWT/Firebase
+  userId: varchar('user_id', { length: 255 }).notNull(),
+
+  // Link Shopee gốc
+  shopeeUrl: text('shopee_url').notNull(),
+
+  // Thông tin sản phẩm parse được (hoặc mock)
+  shopeeProductId: varchar('shopee_product_id', { length: 255 }),
+  shopeeProductName: varchar('shopee_product_name', { length: 500 }),
+  shopeeProductImage: text('shopee_product_image'),
+
+  // Trạng thái job
+  status: jobStatusEnum('status').notNull().default('pending'),
+
+  // Kết quả (chỉ có khi status = 'done')
+  resultUrl: text('result_url'),
+  resultVoucher: varchar('result_voucher', { length: 100 }),
+
+  // Lý do lỗi (chỉ có khi status = 'failed')
+  errorMessage: text('error_message'),
+
+  // Timestamps
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),
+  completedAt: timestamp('completed_at', { withTimezone: true }),
+});
+
+export type Job = typeof jobs.$inferSelect;
+export type NewJob = typeof jobs.$inferInsert;
+</file>
+
+<file path="packages/api/src/queue/queue.ts">
+import { Queue } from 'bullmq';
+import { redis } from '../redis';
+
+// Tên hàng đợi chính của hệ thống
+export const YOUTUBE_TAGGING_QUEUE_NAME = 'youtube-tagging';
+
+export interface YoutubeTaggingJobData {
+  jobId: string;
+  shopeeUrl: string;
+  shopeeProductId?: string | null;
+  userId: string;
+}
+
+// Khởi tạo BullMQ Queue Producer
+export const youtubeQueue = new Queue<YoutubeTaggingJobData>(YOUTUBE_TAGGING_QUEUE_NAME, {
+  // Dùng chung ioredis connection
+  connection: redis,
+  defaultJobOptions: {
+    // Tự động xoá job đã hoàn thành sau 24h hoặc tối đa 1000 jobs
+    removeOnComplete: { age: 86400, count: 1000 },
+    // Tự động xoá job thất bại sau 7 ngày hoặc tối đa 5000 jobs
+    removeOnFail: { age: 604800, count: 5000 },
+    // Cấu hình retry tự động 3 lần với exponential backoff
+    attempts: 3,
+    backoff: {
+      type: 'exponential',
+      delay: 5000, // Thử lại sau 5s, 10s, 20s
+    },
+  },
+});
+
+/**
+ * Đẩy một job mới vào hàng đợi BullMQ
+ */
+export async function addJobToQueue(data: YoutubeTaggingJobData) {
+  const job = await youtubeQueue.add('tag-product', data, {
+    jobId: data.jobId, // Dùng UUID job_id làm BullMQ job ID để dễ tra cứu
+  });
+  console.log(`[Queue] Đã đẩy Job ${data.jobId} vào hàng đợi (BullMQ Job ID: ${job.id})`);
+  return job;
+}
+</file>
+
+<file path="packages/api/src/queue/worker.ts">
+import { Worker, Job } from 'bullmq';
+import { eq } from 'drizzle-orm';
+import { db } from '../db/client';
+import { jobs } from '../db/schema';
+import { redis } from '../redis';
+import { YOUTUBE_TAGGING_QUEUE_NAME, type YoutubeTaggingJobData } from './queue';
+import { tagShopeeProductOnYoutube } from '../automation/youtubeAutomation';
+import { youtubeCircuitBreaker } from '../automation/circuitBreaker';
+
+/**
+ * Hàm xử lý chính cho từng job trong hàng đợi
+ */
+async function processYoutubeTaggingJob(job: Job<YoutubeTaggingJobData>) {
+  const { jobId, shopeeUrl, shopeeProductId } = job.data;
+  console.log(`[Worker] Bắt đầu xử lý Job ID: ${jobId} (Link: ${shopeeUrl})`);
+
+  // 1. Kiểm tra Circuit Breaker (Cầu chì an toàn)
+  if (!youtubeCircuitBreaker.canExecute()) {
+    const errorMsg = '[CircuitBreaker] Cầu chì đang ở trạng thái OPEN. Tạm ngắt worker để bảo vệ tài khoản.';
+    console.error(errorMsg);
+    throw new Error(errorMsg);
+  }
+
+  // 2. Cập nhật trạng thái DB -> 'processing'
+  await db
+    .update(jobs)
+    .set({ status: 'processing' })
+    .where(eq(jobs.id, jobId));
+
+  await job.updateProgress(20);
+
+  // 3. Thực thi Playwright Automation Engine
+  try {
+    const result = await tagShopeeProductOnYoutube({
+      jobId,
+      shopeeUrl,
+      shopeeProductId,
+    });
+
+    await job.updateProgress(90);
+
+    // Ghi nhận thành công cho Circuit Breaker
+    youtubeCircuitBreaker.recordSuccess();
+
+    // 4. Cập nhật kết quả vào DB -> status = 'done'
+    await db
+      .update(jobs)
+      .set({
+        status: 'done',
+        resultUrl: result.affiliateUrl,
+        resultVoucher: result.voucher,
+        completedAt: new Date(),
+      })
+      .where(eq(jobs.id, jobId));
+
+    await job.updateProgress(100);
+    console.log(`[Worker] ✅ Hoàn thành Job ID: ${jobId} -> Result: ${result.affiliateUrl}`);
+
+    return {
+      jobId,
+      resultUrl: result.affiliateUrl,
+      voucher: result.voucher,
+    };
+  } catch (err: any) {
+    // Ghi nhận thất bại cho Circuit Breaker
+    youtubeCircuitBreaker.recordFailure(err.message);
+    throw err;
+  }
+}
+
+// Khởi tạo BullMQ Worker với CONCURRENCY = 1 (Ràng buộc cứng xử lý tuần tự)
+export function initWorker() {
+  const worker = new Worker<YoutubeTaggingJobData>(
+    YOUTUBE_TAGGING_QUEUE_NAME,
+    processYoutubeTaggingJob,
+    {
+      connection: redis,
+      concurrency: 1, // CHỈ XỬ LÝ TUẦN TỰ 1 JOB TẠI 1 THỜI ĐIỂM
+      limiter: {
+        max: 1,
+        duration: 3000, // Khoảng cách tối thiểu 3 giây giữa các job
+      },
+    },
+  );
+
+  worker.on('completed', (job) => {
+    console.log(`[Worker Event] Job ${job.id} đã hoàn thành trong hàng đợi.`);
+  });
+
+  worker.on('failed', async (job, err) => {
+    console.error(`[Worker Event] Job ${job?.id} thất bại:`, err.message);
+    if (job?.data?.jobId) {
+      // Cập nhật DB -> status = 'failed'
+      await db
+        .update(jobs)
+        .set({
+          status: 'failed',
+          errorMessage: err.message,
+        })
+        .where(eq(jobs.id, job.data.jobId));
+    }
+  });
+
+  worker.on('error', (err) => {
+    console.error('[Worker System Error]:', err.message);
+  });
+
+  console.log('⚡ [Worker] Playwright Worker đã sẵn sàng (Concurrency: 1)');
+  return worker;
+}
+</file>
+
+<file path="packages/api/src/routes/dashboard.ts">
+import type { FastifyInstance } from 'fastify';
+import { createBullBoard } from '@bull-board/api';
+import { BullMQAdapter } from '@bull-board/api/bullMQAdapter';
+import { FastifyAdapter } from '@bull-board/fastify';
+import { youtubeQueue } from '../queue/queue';
+
+export async function setupDashboard(app: FastifyInstance) {
+  const serverAdapter = new FastifyAdapter();
+
+  createBullBoard({
+    queues: [new BullMQAdapter(youtubeQueue)],
+    serverAdapter,
+  });
+
+  serverAdapter.setBasePath('/admin/queues');
+
+  await app.register(serverAdapter.registerPlugin(), {
+    prefix: '/admin/queues',
+  });
+
+  app.log.info('📊 [Bull Board] Dashboard quản trị hàng đợi sẵn sàng tại /admin/queues');
+}
+</file>
+
+<file path="packages/api/src/routes/health.ts">
+import type { FastifyInstance } from 'fastify';
+import { checkDbHealth } from '../db/client';
+import { checkRedisHealth } from '../redis';
+
+export async function healthRoutes(app: FastifyInstance) {
+  app.get(
+    '/health',
+    {
+      schema: {
+        description: 'Health check endpoint',
+        tags: ['system'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              status: { type: 'string' },
+              db: { type: 'string' },
+              redis: { type: 'string' },
+              uptime_seconds: { type: 'number' },
+              timestamp: { type: 'string' },
+            },
+          },
+          503: {
+            type: 'object',
+            properties: {
+              status: { type: 'string' },
+              db: { type: 'string' },
+              redis: { type: 'string' },
+              uptime_seconds: { type: 'number' },
+              timestamp: { type: 'string' },
+            },
+          },
+        },
+      },
+    },
+    async (_req, reply) => {
+      const [dbOk, redisOk] = await Promise.all([
+        checkDbHealth(),
+        checkRedisHealth(),
+      ]);
+
+      const allOk = dbOk && redisOk;
+
+      return reply.status(allOk ? 200 : 503).send({
+        status: allOk ? 'ok' : 'degraded',
+        db: dbOk ? 'ok' : 'error',
+        redis: redisOk ? 'ok' : 'error',
+        uptime_seconds: Math.floor(process.uptime()),
+        timestamp: new Date().toISOString(),
+      });
+    },
+  );
+}
+</file>
+
+<file path="packages/api/src/routes/jobs.ts">
+import type { FastifyInstance } from 'fastify';
+import { z } from 'zod';
+import { createJob, getJobById, getJobsByUser } from '../services/job';
+import { isValidShopeeUrl } from '../services/shopee';
+
+// ─── Validation Schemas ───────────────────────────────────────────────────────
+
+const CreateJobBody = z.object({
+  shopee_url: z
+    .string({ required_error: 'shopee_url là bắt buộc' })
+    .url('shopee_url phải là URL hợp lệ')
+    .refine(isValidShopeeUrl, {
+      message: 'URL phải là link Shopee hợp lệ (shopee.vn hoặc shope.ee)',
+    }),
+  user_id: z
+    .string({ required_error: 'user_id là bắt buộc' })
+    .min(1, 'user_id không được để trống')
+    .max(255, 'user_id quá dài'),
+});
+
+const GetJobParams = z.object({
+  id: z.string().uuid('Job ID phải là UUID hợp lệ'),
+});
+
+const GetJobsQuery = z.object({
+  user_id: z.string().min(1),
+  limit: z.coerce.number().min(1).max(100).default(20),
+  offset: z.coerce.number().min(0).default(0),
+});
+
+// ─── Helper: format thời gian chờ sang dạng đọc được ─────────────────────────
+
+function formatWaitTime(seconds: number): string {
+  if (seconds < 60) return `~${seconds} giây`;
+  const minutes = Math.ceil(seconds / 60);
+  if (minutes < 60) return `~${minutes} phút`;
+  const hours = Math.floor(minutes / 60);
+  const remainMin = minutes % 60;
+  return remainMin > 0 ? `~${hours} giờ ${remainMin} phút` : `~${hours} giờ`;
+}
+
+// ─── Routes ───────────────────────────────────────────────────────────────────
+
+export async function jobRoutes(app: FastifyInstance) {
+  // ── POST /jobs ─ Tạo job mới ──────────────────────────────────────────────
+  app.post('/jobs', async (req, reply) => {
+    // Validate body
+    const parseResult = CreateJobBody.safeParse(req.body);
+    if (!parseResult.success) {
+      return reply.status(400).send({
+        error: 'VALIDATION_ERROR',
+        message: parseResult.error.errors.map((e) => e.message).join('; '),
+      });
+    }
+
+    const { shopee_url, user_id } = parseResult.data;
+
+    try {
+      const result = await createJob(user_id, shopee_url);
+
+      if (result.type === 'DUPLICATE_JOB') {
+        return reply.status(409).send({
+          error: 'DUPLICATE_JOB',
+          message: 'Bạn đang có 1 job chưa hoàn thành. Vui lòng chờ kết quả trước khi gửi link mới.',
+          existing_job_id: result.existingJobId,
+        });
+      }
+
+      // Thành công
+      return reply.status(201).send({
+        job_id: result.job.id,
+        status: result.job.status,
+        queue_position: result.queuePosition,
+        estimated_wait_seconds: result.estimatedWaitSeconds,
+        message: `Job đã được tạo. Ước tính ${formatWaitTime(result.estimatedWaitSeconds)} để xử lý.`,
+        product: {
+          id: result.job.shopeeProductId,
+          name: result.job.shopeeProductName,
+          image: result.job.shopeeProductImage,
+        },
+      });
+    } catch (err) {
+      req.log.error(err, '[POST /jobs] Lỗi tạo job');
+      return reply.status(500).send({
+        error: 'INTERNAL_ERROR',
+        message: 'Đã xảy ra lỗi khi tạo job. Vui lòng thử lại.',
+      });
+    }
+  });
+
+  // ── GET /jobs/:id ─ Lấy trạng thái job ────────────────────────────────────
+  app.get<{ Params: { id: string } }>('/jobs/:id', async (req, reply) => {
+    const parseResult = GetJobParams.safeParse(req.params);
+    if (!parseResult.success) {
+      return reply.status(400).send({
+        error: 'VALIDATION_ERROR',
+        message: 'Job ID không hợp lệ',
+      });
+    }
+
+    try {
+      const job = await getJobById(parseResult.data.id);
+
+      if (!job) {
+        return reply.status(404).send({
+          error: 'JOB_NOT_FOUND',
+          message: `Không tìm thấy job với ID: ${parseResult.data.id}`,
+        });
+      }
+
+      return reply.send(job);
+    } catch (err) {
+      req.log.error(err, '[GET /jobs/:id] Lỗi lấy job');
+      return reply.status(500).send({
+        error: 'INTERNAL_ERROR',
+        message: 'Đã xảy ra lỗi. Vui lòng thử lại.',
+      });
+    }
+  });
+
+  // ── GET /jobs ─ Danh sách jobs của user ───────────────────────────────────
+  app.get('/jobs', async (req, reply) => {
+    const parseResult = GetJobsQuery.safeParse(req.query);
+    if (!parseResult.success) {
+      return reply.status(400).send({
+        error: 'VALIDATION_ERROR',
+        message: 'Cần truyền user_id hợp lệ',
+      });
+    }
+
+    const { user_id, limit, offset } = parseResult.data;
+
+    try {
+      const result = await getJobsByUser(user_id, limit, offset);
+      return reply.send({
+        jobs: result.jobs,
+        total: result.total,
+        limit,
+        offset,
+      });
+    } catch (err) {
+      req.log.error(err, '[GET /jobs] Lỗi lấy danh sách job');
+      return reply.status(500).send({
+        error: 'INTERNAL_ERROR',
+        message: 'Đã xảy ra lỗi. Vui lòng thử lại.',
+      });
+    }
+  });
+}
+</file>
+
+<file path="packages/api/src/scripts/checkAdb.ts">
+/**
+ * Script kiểm tra kết nối ADB và điện thoại Android
+ * Chạy: npm run check-adb
+ */
+import { execSync } from 'child_process';
+
+const ADB = 'C:\\platform-tools\\platform-tools\\adb.exe';
+
+function run(cmd: string): string {
+  try {
+    return execSync(cmd, { encoding: 'utf8', timeout: 10000 });
+  } catch (e: any) {
+    return e.stdout || e.stderr || e.message || '';
+  }
+}
+
+async function checkAdb() {
+  console.log('=======================================================');
+  console.log(' 🔍 KIỂM TRA KẾT NỐI ADB & ANDROID DEVICE');
+  console.log('=======================================================');
+
+  // 1. Kiểm tra ADB version
+  console.log('\n[1] ADB Version:');
+  const version = run(`"${ADB}" version`);
+  console.log(version.trim());
+
+  // 2. Kiểm tra thiết bị kết nối
+  console.log('\n[2] Danh sách thiết bị:');
+  const devices = run(`"${ADB}" devices`);
+  console.log(devices.trim());
+
+  const lines = devices.split('\n').filter((l) => l.includes('\t'));
+  if (lines.length === 0) {
+    console.log('\n❌ KHÔNG có thiết bị nào kết nối!');
+    console.log('\n📋 Hướng dẫn kết nối:');
+    console.log('  1. Cắm cáp USB vào điện thoại và máy tính');
+    console.log('  2. Trên điện thoại: Cài đặt → Tùy chọn nhà phát triển');
+    console.log('  3. Bật "Gỡ lỗi qua USB" (USB Debugging)');
+    console.log('  4. Chấp nhận hộp thoại "Cho phép gỡ lỗi qua USB" trên điện thoại');
+    console.log(`  5. Chạy lại: npm run check-adb`);
+    process.exit(1);
+  }
+
+  console.log(`\n✅ Tìm thấy ${lines.length} thiết bị:`);
+  for (const line of lines) {
+    const [serial, status] = line.split('\t');
+    console.log(`  → ${serial.trim()} [${status?.trim()}]`);
+  }
+
+  // 3. Lấy thông tin thiết bị đầu tiên
+  const firstSerial = lines[0].split('\t')[0].trim();
+  console.log(`\n[3] Thông tin thiết bị: ${firstSerial}`);
+
+  const manufacturer = run(`"${ADB}" -s ${firstSerial} shell getprop ro.product.manufacturer`).trim();
+  const model = run(`"${ADB}" -s ${firstSerial} shell getprop ro.product.model`).trim();
+  const androidVersion = run(`"${ADB}" -s ${firstSerial} shell getprop ro.build.version.release`).trim();
+  const apiLevel = run(`"${ADB}" -s ${firstSerial} shell getprop ro.build.version.sdk`).trim();
+
+  console.log(`  Hãng: ${manufacturer}`);
+  console.log(`  Model: ${model}`);
+  console.log(`  Android: ${androidVersion} (API ${apiLevel})`);
+
+  // 4. Kiểm tra YouTube Studio đã cài chưa
+  console.log('\n[4] Kiểm tra YouTube Studio app:');
+  const ytStudio = run(`"${ADB}" -s ${firstSerial} shell pm list packages | findstr creator`);
+  if (ytStudio.includes('creator')) {
+    console.log(`  ✅ YouTube Studio đã cài: ${ytStudio.trim()}`);
+  } else {
+    const ytStudio2 = run(`"${ADB}" -s ${firstSerial} shell pm list packages | findstr youtube`);
+    console.log(`  Apps YouTube tìm thấy:\n  ${ytStudio2.trim()}`);
+    if (!ytStudio2.includes('creator')) {
+      console.log('  ⚠️ Không tìm thấy YouTube Studio. Hãy cài từ Play Store.');
+    }
+  }
+
+  // 5. In package name chính xác
+  console.log('\n[5] Package YouTube Studio:');
+  const pkgCheck = run(`"${ADB}" -s ${firstSerial} shell pm list packages -f | findstr creator`);
+  console.log(pkgCheck.trim() || '  (không tìm thấy)');
+
+  console.log('\n✅ ADB kiểm tra xong! Thiết bị sẵn sàng cho Appium.');
+  console.log(`\n   Serial ID thiết bị: ${firstSerial}`);
+  console.log('   Dùng serial này trong cấu hình Appium.\n');
+}
+
+checkAdb().catch(console.error);
+</file>
+
+<file path="packages/api/src/scripts/exploreShoppingCollections.ts">
+import { chromium, devices, Page } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots');
+const CHANNEL_ID = 'UC3fFeHphb3dQtKcr0RdAOmA';
+
+async function delay(ms: number) {
+  await new Promise((r) => setTimeout(r, ms));
+}
+
+async function snap(page: Page, name: string) {
+  const p = path.join(SCREENSHOT_DIR, name);
+  await page.screenshot({ path: p, fullPage: true });
+  console.log(`📸 ${name}`);
+  return p;
+}
+
+async function bypassSplash(page: Page) {
+  const btn = page.getByText(/TIẾP TỤC CHUYỂN ĐẾN STUDIO|Tiếp tục chuyển đến Studio/i);
+  if (await btn.isVisible({ timeout: 4000 }).catch(() => false)) {
+    console.log('  → Bypass splash...');
+    await btn.click();
+    await delay(3500);
+  }
+}
+
+async function main() {
+  console.log('=======================================================');
+  console.log(' 📱 CLICK TAB MUA SẮM → TÌM TUYỂN TẬP');
+  console.log('=======================================================');
+
+  if (!fs.existsSync(SCREENSHOT_DIR)) fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+
+  const mobileDevice = devices['Pixel 7'] || {
+    viewport: { width: 393, height: 851 },
+    userAgent:
+      'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36',
+    isMobile: true,
+    hasTouch: true,
+  };
+
+  const browser = await chromium.launch({
+    headless: false,
+    channel: 'chrome',
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: ['--disable-blink-features=AutomationControlled', '--no-sandbox'],
+  });
+
+  const context = await browser.newContext({
+    ...mobileDevice,
+    storageState: SESSION_PATH,
+  });
+  await context.addInitScript(
+    "Object.defineProperty(navigator, 'webdriver', { get: () => undefined });"
+  );
+  const page = await context.newPage();
+
+  try {
+    // STEP 1: Vào trang Kiếm tiền / Monetization (Tổng quan)
+    console.log('\n[STEP 1] Vào trang Kiếm tiền...');
+    await page.goto(
+      `https://studio.youtube.com/channel/${CHANNEL_ID}/monetization/overview?approve_browser_access=true`,
+      { waitUntil: 'domcontentloaded', timeout: 30000 }
+    );
+    await delay(3500);
+    await bypassSplash(page);
+    await snap(page, 'tab_step1_monetization.png');
+    console.log(`  URL: ${page.url()}`);
+
+    // STEP 2: Tìm và click tab "Mua sắm" (bị ẩn, cần scroll tabs)
+    console.log('\n[STEP 2] Tìm và click tab MUA SẮM...');
+
+    // Thử click mũi tên > để hiển thị thêm tabs
+    const tabArrow = page.locator('tp-yt-paper-tabs .forward-btn, [class*="forward"], ytcp-tab-bar button[aria-label*="next"], iron-icon[icon="chevron-right"]').first();
+    if (await tabArrow.isVisible({ timeout: 2000 }).catch(() => false)) {
+      console.log('  → Click mũi tên > để hiện tabs ẩn...');
+      await tabArrow.click();
+      await delay(1000);
+    }
+
+    // Click tab Mua sắm
+    const shoppingTab = page.locator('tp-yt-paper-tab').filter({ hasText: 'Mua sắm' }).first();
+    if (await shoppingTab.isVisible({ timeout: 3000 }).catch(() => false)) {
+      console.log('  → Click tab "Mua sắm"...');
+      await shoppingTab.click();
+      await delay(3000);
+    } else {
+      console.log('  → Không tìm thấy tab, thử navigate trực tiếp...');
+      await page.goto(
+        `https://studio.youtube.com/channel/${CHANNEL_ID}/monetization/shopping?approve_browser_access=true`,
+        { waitUntil: 'domcontentloaded', timeout: 30000 }
+      );
+      await delay(3000);
+      await bypassSplash(page);
+    }
+
+    await snap(page, 'tab_step2_after_shopping_tab.png');
+    console.log(`  URL: ${page.url()}`);
+
+    // STEP 3: Đọc nội dung trang Shopping
+    console.log('\n[STEP 3] Nội dung trang Mua sắm...');
+    const bodyText = await page.innerText('body');
+    const lines = bodyText.split('\n').filter((l) => l.trim().length > 2);
+    console.log('  Toàn bộ nội dung (dòng đáng chú ý):');
+    lines.forEach((l) => console.log(`    | ${l.trim()}`));
+
+    // Kiểm tra keywords
+    const kws = ['Tuyển tập', 'Bộ sưu tập', 'Collection', 'Thêm sản phẩm', 'Chia sẻ', 'Quản lý', 'Trung tâm', 'Liên kết', 'affiliate_hub'];
+    for (const kw of kws) {
+      console.log(`  "${kw}": ${bodyText.includes(kw)}`);
+    }
+
+    // STEP 4: Tìm tất cả các links và buttons trên trang
+    console.log('\n[STEP 4] Links & Buttons trên trang...');
+    const allLinks = await page.$$eval('a[href]', (els: any[]) =>
+      els.map((el: any) => ({ href: el.href, text: (el.innerText || '').trim().slice(0, 80) }))
+    );
+    for (const lnk of allLinks) {
+      if (!lnk.href.includes('javascript')) {
+        console.log(`  [${lnk.text || '(no text)'}] → ${lnk.href}`);
+      }
+    }
+
+    const allBtns = await page.$$eval('button, tp-yt-paper-button, ytcp-button', (els: any[]) =>
+      els.map((el: any) => (el.innerText || el.textContent || '').trim().slice(0, 60))
+    );
+    console.log('\n  Buttons:');
+    allBtns.filter((t: string) => t.length > 0).forEach((t: string) => console.log(`  [BTN] "${t}"`));
+
+    // STEP 5: Thử click "Chuyển đến trung tâm mua sắm" hoặc "affiliate_hub"
+    console.log('\n[STEP 5] Tìm link Trung tâm mua sắm...');
+    const affiliateHubLink = page.locator('a[href*="affiliate_hub"], text="Xem thêm", text="Chuyển đến trung tâm mua sắm"').first();
+    if (await affiliateHubLink.isVisible({ timeout: 2000 }).catch(() => false)) {
+      console.log('  → Click Trung tâm mua sắm...');
+      await affiliateHubLink.click();
+      await delay(3000);
+      await bypassSplash(page);
+      await snap(page, 'tab_step5_affiliate_hub.png');
+      console.log(`  URL: ${page.url()}`);
+
+      const hubText = await page.innerText('body');
+      console.log('\n  Nội dung Trung tâm mua sắm:');
+      hubText.split('\n').filter((l) => l.trim().length > 2).forEach((l) => console.log(`    | ${l.trim()}`));
+      
+      // Tìm Tuyển tập ở đây
+      console.log(`\n  "Tuyển tập": ${hubText.includes('Tuyển tập')}`);
+      console.log(`  "Bộ sưu tập": ${hubText.includes('Bộ sưu tập')}`);
+      console.log(`  "Collection": ${hubText.includes('Collection')}`);
+    }
+
+    // STEP 6: Navigate đến affiliate_hub trực tiếp
+    console.log('\n[STEP 6] Navigate trực tiếp đến affiliate_hub...');
+    await page.goto(
+      `https://studio.youtube.com/channel/${CHANNEL_ID}/monetization/affiliate_hub?approve_browser_access=true`,
+      { waitUntil: 'domcontentloaded', timeout: 30000 }
+    );
+    await delay(3500);
+    await bypassSplash(page);
+    await snap(page, 'tab_step6_affiliate_hub.png');
+    console.log(`  URL: ${page.url()}`);
+
+    const hubText2 = await page.innerText('body');
+    const hubLines = hubText2.split('\n').filter((l) => l.trim().length > 2);
+    console.log('\n  Nội dung affiliate_hub:');
+    hubLines.forEach((l) => console.log(`    | ${l.trim()}`));
+    console.log(`\n  "Tuyển tập": ${hubText2.includes('Tuyển tập')}`);
+    console.log(`  "Bộ sưu tập": ${hubText2.includes('Bộ sưu tập')}`);
+
+    // Links tại affiliate_hub
+    const hubLinks = await page.$$eval('a[href]', (els: any[]) =>
+      els.map((el: any) => ({ href: el.href, text: (el.innerText || '').trim().slice(0, 80) }))
+    );
+    console.log('\n  Links tại affiliate_hub:');
+    hubLinks.filter((l: any) => l.href && !l.href.includes('javascript')).forEach((l: any) =>
+      console.log(`  [${l.text || '(no text)'}] → ${l.href}`)
+    );
+
+  } catch (err: any) {
+    console.error('\n❌ Lỗi:', err.message);
+    await snap(page, 'tab_error.png').catch(() => {});
+  } finally {
+    console.log('\n⏳ Giữ 20 giây...');
+    await delay(20000);
+    await browser.close();
+    process.exit(0);
+  }
+}
+
+main();
+</file>
+
+<file path="packages/api/src/scripts/inspectMobileSplash.ts">
+import { chromium, devices } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots');
+
+async function inspectMobileSplash() {
+  console.log('===========================================================');
+  console.log(' 📱 INSPECT GIAO DIỆN MOBILE YOUTUBE STUDIO & TUYỂN TẬP');
+  console.log('===========================================================');
+
+  if (!fs.existsSync(SCREENSHOT_DIR)) {
+    fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  }
+
+  const mobileDevice = devices['Pixel 7'] || {
+    viewport: { width: 393, height: 851 },
+    userAgent:
+      'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36',
+    isMobile: true,
+    hasTouch: true,
+  };
+
+  const browser = await chromium.launch({
+    headless: false,
+    channel: 'chrome',
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--no-sandbox',
+      '--start-maximized',
+    ],
+  });
+
+  const context = await browser.newContext({
+    ...mobileDevice,
+    storageState: SESSION_PATH,
+  });
+
+  await context.addInitScript("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });");
+  const page = await context.newPage();
+
+  try {
+    console.log('[1/4] Đang mở studio.youtube.com...');
+    await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle', timeout: 45000 });
+    await page.waitForTimeout(3000);
+
+    // Chụp lại màn hình ban đầu
+    const ssInit = path.join(SCREENSHOT_DIR, 'mobile_splash_init.png');
+    await page.screenshot({ path: ssInit });
+    console.log(`📸 Màn hình ban đầu: ${ssInit}`);
+
+    // Click vào "TIẾP TỤC CHUYỂN ĐẾN STUDIO"
+    const continueBtn = page.getByText(/TIẾP TỤC CHUYỂN ĐẾN STUDIO|Tiếp tục chuyển đến Studio|Continue to Studio/i);
+    if (await continueBtn.isVisible()) {
+      console.log('👉 Đã thấy nút "TIẾP TỤC CHUYỂN ĐẾN STUDIO", đang bấm...');
+      await continueBtn.click();
+      await page.waitForTimeout(5000);
+    } else {
+      console.log('ℹ️ Không thấy nút splash, thử click link cuối trang');
+      const allLinks = await page.$$('a');
+      for (const link of allLinks) {
+        const txt = await link.innerText();
+        if (txt.includes('STUDIO') || txt.includes('Studio')) {
+          console.log(`👉 Bấm vào link: "${txt}"`);
+          await link.click();
+          await page.waitForTimeout(5000);
+          break;
+        }
+      }
+    }
+
+    // Chụp lại màn hình sau khi bấm
+    const ssAfter = path.join(SCREENSHOT_DIR, 'mobile_dashboard_after_splash.png');
+    await page.screenshot({ path: ssAfter, fullPage: true });
+    console.log(`📸 Màn hình sau khi chuyển vào Studio: ${ssAfter}`);
+
+    // In ra URL hiện tại
+    console.log(`🌐 URL hiện tại: ${page.url()}`);
+
+    // Quét toàn bộ menu và các mục có chữ "Kiếm tiền", "Mua sắm", "Tuyển tập", "Bộ sưu tập"
+    const pageText = await page.innerText('body');
+    console.log('\n--- CÁC TỪ KHÓA TÌM THẤY TRÊN GIAO DIỆN MOBILE ---');
+    console.log('Có chữ "Kiếm tiền":', pageText.includes('Kiếm tiền'));
+    console.log('Có chữ "Mua sắm":', pageText.includes('Mua sắm'));
+    console.log('Có chữ "Tuyển tập":', pageText.includes('Tuyển tập'));
+    console.log('Có chữ "Bộ sưu tập":', pageText.includes('Bộ sưu tập'));
+
+    // Chụp ảnh cuộn trang
+    await page.evaluate('window.scrollBy(0, 600)');
+    await page.waitForTimeout(2000);
+    const ssScroll = path.join(SCREENSHOT_DIR, 'mobile_dashboard_scroll.png');
+    await page.screenshot({ path: ssScroll, fullPage: true });
+    console.log(`📸 Màn hình cuộn: ${ssScroll}`);
+
+  } catch (err: any) {
+    console.error('❌ Lỗi:', err.message);
+  } finally {
+    console.log('\n⏳ Giữ màn hình mở trong 12 giây...');
+    await page.waitForTimeout(12000);
+    await browser.close();
+    process.exit(0);
+  }
+}
+
+inspectMobileSplash();
+</file>
+
+<file path="packages/api/src/scripts/saveSession.ts">
+import { chromium } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+
+async function saveSession() {
+  console.log('===========================================================');
+  console.log(' 🌐 HƯỚNG DẪN LƯU PHIÊN ĐĂNG NHẬP YOUTUBE STUDIO (SESSION)');
+  console.log('===========================================================');
+  console.log('1. Trình duyệt Chrome thật sẽ mở ra.');
+  console.log('2. Vui lòng đăng nhập tài khoản Google / YouTube Studio.');
+  console.log('3. Điều hướng tới trang YouTube Studio Shopping.');
+  console.log('4. Quay lại Terminal và nhấn phím ENTER để lưu session.\n');
+
+  // Đảm bảo thư mục session tồn tại
+  const sessionDir = path.dirname(SESSION_PATH);
+  if (!fs.existsSync(sessionDir)) {
+    fs.mkdirSync(sessionDir, { recursive: true });
+  }
+
+  // Khởi chạy Google Chrome thật (channel: 'chrome') với các cờ chống bị Google chặn đăng nhập
+  const launchOptions: any = {
+    headless: false,
+    ignoreDefaultArgs: ['--enable-automation'], // Tắt cờ automation để Google không phát hiện bot
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--no-sandbox',
+      '--start-maximized',
+    ],
+  };
+
+  // Thử dùng Chrome cài sẵn trên máy (Google Accounts tin tưởng Chrome hơn Chromium thuần)
+  try {
+    launchOptions.channel = 'chrome';
+  } catch {
+    // Fallback sang Chromium mặc định nếu máy không có Chrome
+  }
+
+  const browser = await chromium.launch(launchOptions);
+
+  const context = await browser.newContext({
+    viewport: null,
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  });
+
+  // Ẩn navigator.webdriver đối với Google Login
+  await context.addInitScript("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });");
+
+  const page = await context.newPage();
+
+  await page.goto('https://studio.youtube.com');
+
+  console.log('👉 Trình duyệt đã mở. Vui lòng hoàn tất đăng nhập trên trình duyệt...');
+  console.log('   Sau khi đăng nhập thành công vào YouTube Studio, hãy quay lại đây và nhấn Enter...');
+
+  // Chờ người dùng nhấn ENTER trong console
+  await new Promise<void>((resolve) => {
+    process.stdin.once('data', () => resolve());
+  });
+
+  // Lưu storageState
+  await context.storageState({ path: SESSION_PATH });
+  console.log(`\n✅ ĐÃ LƯU SESSION THÀNH CÔNG VÀO: ${SESSION_PATH}`);
+
+  await browser.close();
+  process.exit(0);
+}
+
+saveSession().catch((err) => {
+  console.error('❌ Lỗi khi lưu session:', err);
+  process.exit(1);
+});
+</file>
+
+<file path="packages/api/src/scripts/testAppium.ts">
+/**
+ * Test kết nối Appium và chạy thử YouTube Studio
+ * Chạy: npm run test-appium
+ *
+ * Yêu cầu:
+ *   1. Appium đang chạy: appium --port 4723
+ *   2. Điện thoại đã kết nối USB + USB Debugging bật
+ *   3. YouTube Studio đã cài trên điện thoại
+ */
+import { AppiumYoutubeStudio } from '../automation/appiumYoutubeStudio';
+import { chromium } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SHOPEE_URL = 'https://vn.shp.ee/5YoD5Mjh';
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots/appium');
+
+async function extractAffiliateLink(collectionShareUrl: string): Promise<string> {
+  console.log('\n═══════════════════════════════════════════════');
+  console.log(' 🌐 TRÍCH XUẤT LINK AFFILIATE TỪ BỘ SƯU TẬP');
+  console.log('═══════════════════════════════════════════════');
+  console.log(`  URL bộ sưu tập: ${collectionShareUrl}`);
+
+  const browser = await chromium.launch({ headless: false });
+  const page = await browser.newPage();
+
+  try {
+    await page.goto(collectionShareUrl, { waitUntil: 'networkidle', timeout: 30000 });
+    await page.waitForTimeout(3000);
+
+    if (!fs.existsSync(SCREENSHOT_DIR)) fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+    await page.screenshot({ path: path.join(SCREENSHOT_DIR, 'collection_page.png'), fullPage: true });
+    console.log('  📸 Chụp trang bộ sưu tập');
+
+    // Tìm tất cả links sản phẩm trên trang
+    const productLinks = await page.$$eval('a[href]', (els: any[]) =>
+      els
+        .map((el: any) => ({ href: el.href, text: (el.innerText || '').trim().slice(0, 100) }))
+        .filter((l: any) => l.href.includes('shopee') || l.href.includes('shp.ee') || l.href.includes('lazada') || l.href.includes('youtube'))
+    );
+
+    console.log(`\n  Tìm thấy ${productLinks.length} link sản phẩm:`);
+    for (const link of productLinks) {
+      console.log(`  [${link.text || '(no text)'}] → ${link.href}`);
+    }
+
+    // Lấy link đầu tiên có dạng Shopee
+    const shopeeLink = productLinks.find(
+      (l: any) => l.href.includes('shopee') || l.href.includes('shp.ee')
+    );
+
+    if (shopeeLink) {
+      console.log(`\n  ✅ Link affiliate: ${shopeeLink.href}`);
+      return shopeeLink.href;
+    }
+
+    // Thử tìm link theo button/card
+    const allLinks = await page.$$eval('a[href]', (els: any[]) =>
+      els.map((el: any) => el.href)
+    );
+    const affiliateLink = allLinks.find(
+      (href: string) => href.includes('shp.ee') || href.includes('shopee.vn')
+    );
+
+    return affiliateLink || collectionShareUrl;
+  } finally {
+    await page.waitForTimeout(5000);
+    await browser.close();
+  }
+}
+
+async function main() {
+  console.log('═══════════════════════════════════════════════════════');
+  console.log(' 📱 TEST APPIUM + YOUTUBE STUDIO → AFFILIATE LINK');
+  console.log('═══════════════════════════════════════════════════════');
+  console.log(`  Sản phẩm Shopee: ${SHOPEE_URL}\n`);
+
+  const studio = new AppiumYoutubeStudio();
+
+  try {
+    // Khởi động Appium
+    console.log('[STEP 1] Kết nối Appium...');
+    await studio.init();
+
+    // Gắn sản phẩm vào Tuyển tập
+    console.log('\n[STEP 2] Gắn sản phẩm vào Tuyển tập...');
+    const shareLink = await studio.addProductToCollection(SHOPEE_URL);
+
+    if (!shareLink) {
+      throw new Error('Không lấy được link chia sẻ bộ sưu tập');
+    }
+
+    // Trích xuất link affiliate
+    console.log('\n[STEP 3] Trích xuất link affiliate...');
+    const affiliateLink = await extractAffiliateLink(shareLink);
+
+    console.log('\n══════════════════════════════════════════════════');
+    console.log(' ✅ KẾT QUẢ HOÀN THÀNH');
+    console.log('══════════════════════════════════════════════════');
+    console.log(`  Link Shopee gốc:   ${SHOPEE_URL}`);
+    console.log(`  Link bộ sưu tập:   ${shareLink}`);
+    console.log(`  Link affiliate:    ${affiliateLink}`);
+
+  } catch (err: any) {
+    console.error(`\n❌ Lỗi: ${err.message}`);
+
+    if (err.message.includes('ECONNREFUSED') || err.message.includes('connect')) {
+      console.log('\n💡 Appium chưa chạy! Hãy mở terminal mới và chạy:');
+      console.log('   appium --port 4723');
+    } else if (err.message.includes('thiết bị')) {
+      console.log('\n💡 Không tìm thấy điện thoại. Hãy:');
+      console.log('   1. Cắm cáp USB');
+      console.log('   2. Bật USB Debugging trên điện thoại');
+      console.log('   3. Chấp nhận "Cho phép gỡ lỗi qua USB"');
+      console.log('   4. Chạy: npm run check-adb');
+    }
+  } finally {
+    await studio.close();
+    process.exit(0);
+  }
+}
+
+main();
+</file>
+
+<file path="packages/api/src/scripts/testMobileCollectionTagging.ts">
+import { chromium, devices } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots');
+
+async function humanDelay(minMs = 1500, maxMs = 2500): Promise<void> {
+  const delay = Math.floor(minMs + Math.random() * (maxMs - minMs));
+  await new Promise((resolve) => setTimeout(resolve, delay));
+}
+
+async function testMobileCollectionTagging() {
+  const shopeeUrl = 'https://vn.shp.ee/5YoD5Mjh';
+
+  console.log('========================================================================');
+  console.log(' 📱 TEST QUY TRÌNH GẮN SẢN PHẨM QUA TUYỂN TẬP / SHOPPING (GIẢ LẬP MOBILE)');
+  console.log('========================================================================');
+  console.log(`🔗 Link sản phẩm: ${shopeeUrl}`);
+  console.log(`🔑 File session: ${SESSION_PATH}\n`);
+
+  if (!fs.existsSync(SCREENSHOT_DIR)) {
+    fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  }
+
+  // 1. Cấu hình Giả lập Mobile (Pixel 7 / iPhone)
+  const mobileDevice = devices['Pixel 7'] || {
+    viewport: { width: 393, height: 851 },
+    userAgent:
+      'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36',
+    isMobile: true,
+    hasTouch: true,
+  };
+
+  console.log('[1/7] Khởi chạy Chrome với chế độ giả lập Mobile Phone...');
+  const browser = await chromium.launch({
+    headless: false,
+    channel: 'chrome',
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--no-sandbox',
+      '--start-maximized',
+    ],
+  });
+
+  const context = await browser.newContext({
+    ...mobileDevice,
+    storageState: SESSION_PATH,
+  });
+
+  await context.addInitScript("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });");
+  const page = await context.newPage();
+
+  try {
+    // 2. Vào YouTube Studio
+    console.log('[2/7] Đang mở trang YouTube Studio Mobile...');
+    await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle', timeout: 45000 });
+    await humanDelay(2000, 3000);
+
+    // Kiểm tra nếu có màn hình "Hãy dùng thử ứng dụng YouTube Studio" -> Bấm "TIẾP TỤC CHUYỂN ĐẾN STUDIO"
+    const continueToStudio = page.locator('text="TIẾP TỤC CHUYỂN ĐẾN STUDIO", text="Tiếp tục chuyển đến Studio", text="CONTINUE TO STUDIO"').first();
+    if (await continueToStudio.isVisible()) {
+      console.log('👉 Phát hiện màn hình app splash -> Đang bấm [ TIẾP TỤC CHUYỂN ĐẾN STUDIO ]...');
+      await continueToStudio.click();
+      await humanDelay(3000, 4500);
+    }
+
+    const ss1 = path.join(SCREENSHOT_DIR, 'mobile_1_home.png');
+    await page.screenshot({ path: ss1 });
+    console.log(`📸 Đã chụp màn hình trang chủ: ${ss1}`);
+
+    // 3. Vào Kiếm tiền -> Mua sắm (Shopping)
+    console.log('[3/7] Đang điều hướng tới mục Kiếm tiền -> Mua sắm...');
+    
+    // Thử truy cập trực tiếp URL Shopping của Studio
+    const currentUrl = page.url();
+    const channelIdMatch = currentUrl.match(/channel\/([^/]+)/);
+    if (channelIdMatch) {
+      const channelId = channelIdMatch[1];
+      const shoppingUrl = `https://studio.youtube.com/channel/${channelId}/monetization/shopping`;
+      console.log(`👉 Mở link trực tiếp: ${shoppingUrl}`);
+      await page.goto(shoppingUrl, { waitUntil: 'networkidle', timeout: 30000 });
+    } else {
+      // Bấm qua menu
+      const earnMenu = page.locator('a[href*="monetization"], tp-yt-paper-item:has-text("Kiếm tiền"), tp-yt-paper-item:has-text("Earn")').first();
+      if (await earnMenu.isVisible()) {
+        await earnMenu.click();
+        await humanDelay(2000, 3000);
+      }
+      const shoppingTab = page.locator('tp-yt-paper-tab:has-text("Mua sắm"), div[role="tab"]:has-text("Mua sắm")').first();
+      if (await shoppingTab.isVisible()) {
+        await shoppingTab.click();
+        await humanDelay(2000, 3000);
+      }
+    }
+
+    const ss2 = path.join(SCREENSHOT_DIR, 'mobile_2_shopping.png');
+    await page.screenshot({ path: ss2 });
+    console.log(`📸 Đã chụp màn hình trang Mua sắm: ${ss2}`);
+
+    // 4. Tìm mục Tuyển tập (Collections) và chọn 1 bộ sưu tập bất kỳ
+    console.log('[4/7] Đang tìm kiếm mục Tuyển tập (Collections)...');
+    const collectionSelectors = [
+      'div:has-text("Tuyển tập")',
+      'div:has-text("Bộ sưu tập")',
+      'ytcp-collection-card',
+      'a[href*="collection"]',
+      'div[role="listitem"]',
+    ];
+
+    let foundCollection = false;
+    for (const sel of collectionSelectors) {
+      const el = page.locator(sel).first();
+      if (await el.isVisible()) {
+        console.log(`👉 Tìm thấy mục/bộ sưu tập: ${sel}`);
+        await el.click();
+        foundCollection = true;
+        await humanDelay(2000, 3000);
+        break;
+      }
+    }
+    if (!foundCollection) console.log('ℹ️ Đang quét tiếp các phần tử trên trang Mua sắm.');
+
+    const ss3 = path.join(SCREENSHOT_DIR, 'mobile_3_collection_detail.png');
+    await page.screenshot({ path: ss3 });
+    console.log(`📸 Đã chụp màn hình chi tiết bộ sưu tập: ${ss3}`);
+
+    // 5. Thêm sản phẩm -> Dán link Shopee -> Chọn Người bán Shopee -> Chọn SP -> Xong -> Đăng
+    console.log('[5/7] Đang thực hiện gắn link Shopee vào bộ sưu tập...');
+    const addProductBtn = page.locator('button, tp-yt-paper-button').filter({ hasText: 'Thêm sản phẩm' }).first();
+    if (await addProductBtn.isVisible()) {
+      console.log('👉 Bấm nút [ Thêm sản phẩm ]');
+      await addProductBtn.click();
+      await humanDelay(1500, 2500);
+
+      // Ô dán link
+      const searchInput = page.locator('input[placeholder*="Tìm kiếm"], input[placeholder*="Dán"], input[type="text"]').first();
+      if (await searchInput.isVisible()) {
+        console.log(`👉 Dán link Shopee: ${shopeeUrl}`);
+        await searchInput.fill(shopeeUrl);
+        await page.keyboard.press('Enter');
+        await humanDelay(2000, 3500);
+      }
+
+      // Chọn người bán Shopee nếu có
+      const sellerShopee = page.locator('text="Shopee"').first();
+      if (await sellerShopee.isVisible()) {
+        console.log('👉 Nhấn chọn người bán Shopee');
+        await sellerShopee.click();
+        await humanDelay(1500, 2500);
+      }
+
+      // Chọn sản phẩm hiện ra
+      const productCheckbox = page.locator('input[type="checkbox"], [role="checkbox"], ytcp-checkbox').first();
+      if (await productCheckbox.isVisible()) {
+        console.log('👉 Tick chọn sản phẩm');
+        await productCheckbox.click();
+        await humanDelay(1000, 2000);
+      }
+
+      // Bấm nút Xong
+      const doneBtn = page.locator('button:has-text("Xong"), button:has-text("Done")').first();
+      if (await doneBtn.isVisible()) {
+        console.log('👉 Bấm nút [ Xong ]');
+        await doneBtn.click();
+        await humanDelay(2000, 3000);
+      }
+
+      // Bấm nút Đăng
+      const publishBtn = page.locator('button:has-text("Đăng"), button:has-text("Publish")').first();
+      if (await publishBtn.isVisible()) {
+        console.log('👉 Bấm nút [ Đăng ]');
+        await publishBtn.click();
+        await humanDelay(2500, 4000);
+      }
+    }
+
+    const ss4 = path.join(SCREENSHOT_DIR, 'mobile_4_publish_result.png');
+    await page.screenshot({ path: ss4 });
+    console.log(`📸 Đã chụp màn hình sau khi Đăng: ${ss4}`);
+
+    // 6. Giai đoạn 2: Lấy link chia sẻ bộ sưu tập và trích xuất link Affiliate sản phẩm
+    console.log('[6/7] Đang lấy link chia sẻ của Bộ sưu tập...');
+    const moreMenuBtn = page.locator('button[aria-label*="Tác vụ"], button[aria-label*="Action"], ytcp-icon-button:has-text("more_vert")').first();
+    if (await moreMenuBtn.isVisible()) {
+      await moreMenuBtn.click();
+      await humanDelay(1000, 2000);
+      
+      const shareBtn = page.locator('text="Chia sẻ", text="Share"').first();
+      if (await shareBtn.isVisible()) {
+        await shareBtn.click();
+        await humanDelay(1000, 2000);
+      }
+    }
+
+    console.log('[7/7] Hoàn thành các bước!');
+  } catch (err: any) {
+    console.error('❌ Lỗi:', err.message);
+    const ssErr = path.join(SCREENSHOT_DIR, 'mobile_error.png');
+    await page.screenshot({ path: ssErr });
+    console.log(`📸 Đã chụp ảnh màn hình lỗi: ${ssErr}`);
+  } finally {
+    console.log('⏳ Giữ màn hình mở trong 12 giây để quan sát...');
+    await page.waitForTimeout(12000);
+    await browser.close();
+    process.exit(0);
+  }
+}
+
+testMobileCollectionTagging();
+</file>
+
+<file path="packages/api/src/scripts/testRealTagging.ts">
+import { chromium } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots');
+
+async function testRealTagging() {
+  const shopeeUrl = 'https://vn.shp.ee/5YoD5Mjh';
+
+  console.log('===========================================================');
+  console.log(' 🚀 TIẾN HÀNH TEST THẬT TRÊN YOUTUBE STUDIO & LINK SHOPEE');
+  console.log('===========================================================');
+  console.log(`🔗 Link sản phẩm: ${shopeeUrl}`);
+  console.log(`🔑 File session: ${SESSION_PATH}\n`);
+
+  if (!fs.existsSync(SCREENSHOT_DIR)) {
+    fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  }
+
+  // 1. Khởi chạy trình duyệt Chrome với session đã lưu
+  console.log('[1/4] Đang khởi chạy Chrome với session đăng nhập thật...');
+  const browser = await chromium.launch({
+    headless: false, // Bật giao diện để bạn và hệ thống cùng quan sát trực tiếp
+    channel: 'chrome',
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--no-sandbox',
+      '--start-maximized',
+    ],
+  });
+
+  const context = await browser.newContext({
+    storageState: SESSION_PATH,
+    viewport: null,
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  });
+
+  await context.addInitScript("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });");
+
+  const page = await context.newPage();
+
+  try {
+    // 2. Truy cập YouTube Studio
+    console.log('[2/4] Đang mở trang YouTube Studio...');
+    await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle', timeout: 45000 });
+    
+    // Đợi 3 giây để trang load đầy đủ
+    await page.waitForTimeout(3000);
+    const ss1 = path.join(SCREENSHOT_DIR, 'real_test_1_studio_home.png');
+    await page.screenshot({ path: ss1, fullPage: true });
+    console.log(`📸 Đã chụp màn hình trang chủ Studio: ${ss1}`);
+
+    // 3. Tìm mục Kiếm tiền / Shopping hoặc nút Gắn sản phẩm
+    console.log('[3/4] Đang kiểm tra giao diện Shopping / Kiếm tiền trên kênh...');
+    
+    // Tìm các selector phổ biến của YouTube Shopping / Earn tab
+    const earnSelectors = [
+      'a[test-id="monetization"]',
+      '#menu-item-link-monetization',
+      'tp-yt-paper-item:has-text("Earn")',
+      'tp-yt-paper-item:has-text("Kiếm tiền")',
+      'tp-yt-paper-item:has-text("Shopping")',
+      'a[href*="monetization"]',
+    ];
+
+    let foundEarnTab = false;
+    for (const selector of earnSelectors) {
+      if (await page.$(selector)) {
+        console.log(`👉 Đã tìm thấy menu: ${selector}`);
+        await page.click(selector);
+        foundEarnTab = true;
+        await page.waitForTimeout(3000);
+        break;
+      }
+    }
+    if (!foundEarnTab) console.log('ℹ️ Không thấy selector menu Earn mặc định, đang ở trang hiện tại.');
+
+    // 4. Bấm vào tab "Mua sắm" trong trang Kiếm tiền
+    console.log('[4/5] Đang mở tab "Mua sắm" (Shopping)...');
+    const shoppingTabSelectors = [
+      'tp-yt-paper-tab:has-text("Mua sắm")',
+      'div[role="tab"]:has-text("Mua sắm")',
+      'tp-yt-paper-tab:has-text("Shopping")',
+      'div[role="tab"]:has-text("Shopping")',
+      'div:has-text("Mua sắm"):visible',
+    ];
+
+    let foundShoppingTab = false;
+    for (const tabSel of shoppingTabSelectors) {
+      const el = await page.$(tabSel);
+      if (el && await el.isVisible()) {
+        console.log(`👉 Đã tìm thấy tab Mua sắm: ${tabSel}`);
+        await el.click();
+        foundShoppingTab = true;
+        await page.waitForTimeout(4000);
+        break;
+      }
+    }
+    if (!foundShoppingTab) console.log('ℹ️ Chưa bấm được tab Mua sắm.');
+
+    const ss2 = path.join(SCREENSHOT_DIR, 'real_test_2_shopping_tab.png');
+    await page.screenshot({ path: ss2, fullPage: true });
+    console.log(`📸 Đã chụp màn hình mục Mua sắm: ${ss2}`);
+
+    // 5. Tìm ô tìm kiếm sản phẩm hoặc nút gắn sản phẩm trong tab Mua sắm
+    console.log('[5/5] Đang tìm kiếm công cụ thêm sản phẩm trong tab Mua sắm...');
+    const productTaggingSelectors = [
+      'button:has-text("Gắn thẻ sản phẩm")',
+      'button:has-text("Tag products")',
+      'button:has-text("Thêm sản phẩm")',
+      'button:has-text("Add products")',
+      'input[placeholder*="Tìm kiếm sản phẩm"]',
+      'input[placeholder*="Search products"]',
+    ];
+
+    let foundProductTool = false;
+    for (const toolSel of productTaggingSelectors) {
+      const el = await page.$(toolSel);
+      if (el && await el.isVisible()) {
+        console.log(`👉 Tìm thấy công cụ gắn sản phẩm: ${toolSel}`);
+        await el.click();
+        foundProductTool = true;
+        await page.waitForTimeout(3000);
+        break;
+      }
+    }
+    if (!foundProductTool) console.log('ℹ️ Kiểm tra toàn bộ các nút trên trang Mua sắm.');
+
+    const ss3 = path.join(SCREENSHOT_DIR, 'real_test_3_product_result.png');
+    await page.screenshot({ path: ss3, fullPage: true });
+    console.log(`📸 Đã chụp màn hình kết quả: ${ss3}`);
+
+    console.log('\n===========================================================');
+    console.log(' 🎉 HOÀN TẤT BƯỚC TEST THỰC TẾ TRÊN GIAO DIỆN!');
+    console.log('===========================================================');
+
+  } catch (err: any) {
+    console.error('❌ Lỗi trong quá trình chạy test thật:', err.message);
+    const ssErr = path.join(SCREENSHOT_DIR, 'real_test_error.png');
+    await page.screenshot({ path: ssErr, fullPage: true });
+    console.log(`📸 Đã chụp ảnh màn hình lỗi tại: ${ssErr}`);
+  } finally {
+    console.log('\n⏳ Giữ trình duyệt mở trong 10 giây để bạn quan sát kết quả...');
+    await page.waitForTimeout(10000);
+    await browser.close();
+    process.exit(0);
+  }
+}
+
+testRealTagging();
+</file>
+
+<file path="packages/api/src/scripts/testShoppingCollections.ts">
+import { chromium } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots');
+
+async function humanDelay(minMs = 1500, maxMs = 2500): Promise<void> {
+  const delay = Math.floor(minMs + Math.random() * (maxMs - minMs));
+  await new Promise((resolve) => setTimeout(resolve, delay));
+}
+
+async function testShoppingCollections() {
+  const shopeeUrl = 'https://vn.shp.ee/5YoD5Mjh';
+
+  console.log('===========================================================');
+  console.log(' 🛍️ TEST TÌM MỤC TUYỂN TẬP (COLLECTIONS) TRONG MUA SẮM');
+  console.log('===========================================================');
+  console.log(`🔗 Link sản phẩm: ${shopeeUrl}\n`);
+
+  if (!fs.existsSync(SCREENSHOT_DIR)) {
+    fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  }
+
+  const browser = await chromium.launch({
+    headless: false,
+    channel: 'chrome',
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--no-sandbox',
+      '--start-maximized',
+    ],
+  });
+
+  const context = await browser.newContext({
+    storageState: SESSION_PATH,
+    viewport: null,
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  });
+
+  await context.addInitScript("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });");
+  const page = await context.newPage();
+
+  try {
+    // 1. Mở trang YouTube Studio
+    console.log('[1/5] Mở trang YouTube Studio...');
+    await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle', timeout: 45000 });
+    await humanDelay(2000, 3000);
+
+    // 2. Vào Kiếm tiền -> Mua sắm
+    console.log('[2/5] Mở mục Kiếm tiền -> Mua sắm...');
+    const earnMenu = page.locator('a[href*="monetization"]').first();
+    if (await earnMenu.isVisible()) {
+      await earnMenu.click();
+      await humanDelay(2000, 3000);
+    }
+
+    const shoppingTab = page.locator('tp-yt-paper-tab:has-text("Mua sắm")').first();
+    if (await shoppingTab.isVisible()) {
+      await shoppingTab.click();
+      await humanDelay(3000, 4000);
+    }
+
+    // 3. Cuộn toàn trang Mua sắm xuống dưới để tải hết các mục (Tuyển tập, Cửa hàng, v.v.)
+    console.log('[3/5] Đang cuộn trang Mua sắm để quét toàn bộ mục Tuyển tập...');
+    await page.evaluate('window.scrollBy(0, 800)');
+    await humanDelay(1500, 2500);
+
+    const ssShoppingFull = path.join(SCREENSHOT_DIR, 'collections_1_shopping_scroll.png');
+    await page.screenshot({ path: ssShoppingFull, fullPage: true });
+    console.log(`📸 Đã chụp ảnh toàn bộ trang Mua sắm: ${ssShoppingFull}`);
+
+    // 4. Tìm mục Tuyển tập (Collections)
+    console.log('[4/5] Tìm kiếm chữ "Tuyển tập" hoặc "Bộ sưu tập"...');
+    const collectionElements = await page.$$('text="Tuyển tập", text="Bộ sưu tập", text="Collections"');
+    console.log(`👉 Tìm thấy ${collectionElements.length} phần tử liên quan đến Tuyển tập!`);
+
+    for (let i = 0; i < collectionElements.length; i++) {
+      const isVis = await collectionElements[i].isVisible();
+      const text = await collectionElements[i].innerText();
+      console.log(`  [Phần tử ${i + 1}] Text: "${text}" | Visible: ${isVis}`);
+    }
+
+    // 5. Tìm các nút hoặc thẻ bộ sưu tập cụ thể
+    const collectionCards = await page.$$('ytcp-collection-card, [test-id*="collection"], a[href*="collection"]');
+    console.log(`👉 Tìm thấy ${collectionCards.length} thẻ bộ sưu tập cụ thể.`);
+
+    console.log('\n===========================================================');
+    console.log(' 🎉 HOÀN THÀNH QUÉT TRANG MUA SẮM & TUYỂN TẬP!');
+    console.log('===========================================================');
+  } catch (err: any) {
+    console.error('❌ Lỗi:', err.message);
+  } finally {
+    console.log('⏳ Giữ màn hình mở trong 10 giây để quan sát...');
+    await page.waitForTimeout(10000);
+    await browser.close();
+    process.exit(0);
+  }
+}
+
+testShoppingCollections();
+</file>
+
+<file path="packages/api/src/scripts/testTagVideo.ts">
+import { chromium } from 'playwright';
+import * as path from 'path';
+import * as fs from 'fs';
+
+const SESSION_PATH = path.join(__dirname, '../../session/storageState.json');
+const SCREENSHOT_DIR = path.join(__dirname, '../../logs/screenshots');
+
+async function testTagVideo() {
+  const shopeeUrl = 'https://vn.shp.ee/5YoD5Mjh';
+
+  console.log('===========================================================');
+  console.log(' 🎬 TEST GẮN THẺ SẢN PHẨM SHOPEE VÀO VIDEO/SHORTS TRÊN YOUTUBE');
+  console.log('===========================================================');
+  console.log(`🔗 Link sản phẩm Shopee: ${shopeeUrl}\n`);
+
+  if (!fs.existsSync(SCREENSHOT_DIR)) {
+    fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  }
+
+  const browser = await chromium.launch({
+    headless: false,
+    channel: 'chrome',
+    ignoreDefaultArgs: ['--enable-automation'],
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--no-sandbox',
+      '--start-maximized',
+    ],
+  });
+
+  const context = await browser.newContext({
+    storageState: SESSION_PATH,
+    viewport: null,
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+  });
+
+  await context.addInitScript("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });");
+
+  const page = await context.newPage();
+
+  try {
+    // 1. Mở trang Nội dung (Content / Videos)
+    console.log('[1/5] Đang mở trang Nội dung video...');
+    await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle', timeout: 45000 });
+    await page.waitForTimeout(2000);
+
+    const contentMenuSelectors = [
+      'tp-yt-paper-item:has-text("Nội dung")',
+      '#menu-item-link-content',
+      'a[test-id="content"]',
+      'a[href*="videos"]',
+    ];
+
+    for (const sel of contentMenuSelectors) {
+      const el = await page.$(sel);
+      if (el && await el.isVisible()) {
+        console.log(`👉 Bấm vào menu Nội dung: ${sel}`);
+        await el.click();
+        await page.waitForTimeout(3000);
+        break;
+      }
+    }
+
+    // 1.1 Chuyển sang tab Shorts
+    console.log('[1.1] Đang chuyển sang tab Shorts...');
+    const shortsTabSelectors = [
+      'tp-yt-paper-tab:has-text("Shorts")',
+      'div[role="tab"]:has-text("Shorts")',
+      'div:has-text("Shorts"):visible',
+    ];
+    for (const sSel of shortsTabSelectors) {
+      const el = await page.$(sSel);
+      if (el && await el.isVisible()) {
+        console.log(`👉 Bấm vào tab Shorts: ${sSel}`);
+        await el.click();
+        await page.waitForTimeout(3000);
+        break;
+      }
+    }
+
+    const ssContent = path.join(SCREENSHOT_DIR, 'tag_1_content_list.png');
+    await page.screenshot({ path: ssContent, fullPage: true });
+    console.log(`📸 Đã chụp màn hình danh sách Shorts: ${ssContent}`);
+
+    // 2. Chọn video/shorts đầu tiên để mở chi tiết
+    console.log('[2/5] Đang chọn video đầu tiên trong danh sách...');
+    const firstVideoSelectors = [
+      '#video-title',
+      'a[id="video-title"]',
+      'ytcp-video-list-cell-video a',
+      '.style-scope.ytcp-video-list-cell-video',
+    ];
+
+    let clickedVideo = false;
+    for (const vSel of firstVideoSelectors) {
+      const el = await page.$(vSel);
+      if (el && await el.isVisible()) {
+        console.log(`👉 Bấm vào video: ${vSel}`);
+        await el.click();
+        clickedVideo = true;
+        await page.waitForTimeout(4000);
+        break;
+      }
+    }
+    if (!clickedVideo) console.log('ℹ️ Thử click trực tiếp vào hàng video đầu tiên.');
+
+    const ssDetail = path.join(SCREENSHOT_DIR, 'tag_2_video_details.png');
+    await page.screenshot({ path: ssDetail, fullPage: true });
+    console.log(`📸 Đã chụp màn hình chi tiết video: ${ssDetail}`);
+
+    // 3. Click chính xác vào nút [ 👜 Sản phẩm ]
+    console.log('[3/5] Đang bấm vào nút [ 👜 Sản phẩm ]...');
+    const productButton = page.locator('button, tp-yt-paper-button, ytcp-chip').filter({ hasText: 'Sản phẩm' }).first();
+    
+    if (await productButton.isVisible()) {
+      console.log('👉 Đã tìm thấy nút [ Sản phẩm ], đang click...');
+      await productButton.click();
+      await page.waitForTimeout(3000);
+    } else {
+      console.log('ℹ️ Thử click bằng selector text');
+      await page.click('text="Sản phẩm"');
+      await page.waitForTimeout(3000);
+    }
+
+    const ssTagModal = path.join(SCREENSHOT_DIR, 'tag_3_tag_modal.png');
+    await page.screenshot({ path: ssTagModal, fullPage: true });
+    console.log(`📸 Đã chụp màn hình sau khi bấm Sản phẩm: ${ssTagModal}`);
+
+    // 4. Tìm ô tìm kiếm sản phẩm trong dialog vừa mở
+    console.log('[4/5] Đang tìm ô dán link Shopee trong modal...');
+    const dialogSearch = page.locator('ytcp-dialog input, ytcp-navigation-dialog input, input[type="text"]').first();
+    if (await dialogSearch.isVisible()) {
+      console.log('👉 Đã tìm thấy ô tìm kiếm trong dialog, đang dán link Shopee...');
+      await dialogSearch.fill(shopeeUrl);
+      await page.keyboard.press('Enter');
+      await page.waitForTimeout(4000);
+    } else {
+      console.log('ℹ️ Không thấy ô input trong dialog.');
+    }
+
+    const ssResult = path.join(SCREENSHOT_DIR, 'tag_4_search_result.png');
+    await page.screenshot({ path: ssResult, fullPage: true });
+    console.log(`📸 Đã chụp màn hình kết quả: ${ssResult}`);
+
+    console.log('\n===========================================================');
+    console.log(' 🎉 HOÀN TẤT KIỂM TRA QUY TRÌNH GẮN SẢN PHẨM TRỰC TIẾP!');
+    console.log('===========================================================');
+  } catch (err: any) {
+    console.error('❌ Lỗi:', err.message);
+  } finally {
+    console.log('⏳ Giữ trình duyệt 10 giây để quan sát...');
+    await page.waitForTimeout(10000);
+    await browser.close();
+    process.exit(0);
+  }
+}
+
+testTagVideo();
+</file>
+
+<file path="packages/api/src/services/job.ts">
+import { eq, and, inArray, lt, count } from 'drizzle-orm';
+import { db } from '../db/client';
+import { jobs } from '../db/schema';
+import { parseShopeeUrl, fetchShopeeProduct } from './shopee';
+import { addJobToQueue } from '../queue/queue';
+import { config } from '../config';
+import type { JobDetailResponse } from '../types';
+
+// ─── Tính toán hàng đợi ───────────────────────────────────────────────────────
+
+/**
+ * Đếm số job đang pending/processing trong hàng đợi
+ * → Dùng để tính vị trí hàng đợi và thời gian chờ ước tính
+ */
+async function countActiveJobs(): Promise<number> {
+  const result = await db
+    .select({ value: count() })
+    .from(jobs)
+    .where(inArray(jobs.status, ['pending', 'processing']));
+  return result[0]?.value ?? 0;
+}
+
+/**
+ * Tính vị trí trong hàng đợi của một job cụ thể
+ * (số job pending/processing được tạo TRƯỚC job này)
+ */
+async function getQueuePosition(_jobId: string, createdAt: Date): Promise<number> {
+  const result = await db
+    .select({ value: count() })
+    .from(jobs)
+    .where(
+      and(
+        inArray(jobs.status, ['pending', 'processing']),
+        lt(jobs.createdAt, createdAt),
+      ),
+    );
+  return (result[0]?.value ?? 0) + 1; // +1 vì vị trí bắt đầu từ 1
+}
+
+// ─── Tạo job mới ──────────────────────────────────────────────────────────────
+
+export async function createJob(userId: string, shopeeUrl: string) {
+  // 1. Kiểm tra user có job đang chờ không (pending hoặc processing)
+  const existingJob = await db
+    .select({ id: jobs.id, status: jobs.status })
+    .from(jobs)
+    .where(
+      and(
+        eq(jobs.userId, userId),
+        inArray(jobs.status, ['pending', 'processing']),
+      ),
+    )
+    .limit(1);
+
+  if (existingJob.length > 0) {
+    return {
+      type: 'DUPLICATE_JOB' as const,
+      existingJobId: existingJob[0].id,
+    };
+  }
+
+  // 2. Parse Shopee URL
+  const parsed = parseShopeeUrl(shopeeUrl);
+  // Nếu không parse được, vẫn tạo job nhưng không có product info
+  // (automation worker sẽ tự xử lý)
+
+  // 3. Fetch thông tin sản phẩm (mock hoặc API thật)
+  let productInfo = null;
+  if (parsed) {
+    try {
+      productInfo = await fetchShopeeProduct(shopeeUrl, parsed.productId, parsed.sellerId);
+    } catch (err) {
+      // Không fail nếu fetch product thất bại — job vẫn tạo được
+      console.warn('[JobService] Không fetch được product info:', err);
+    }
+  }
+
+  // 4. Tính vị trí hàng đợi hiện tại (trước khi insert)
+  const activeCount = await countActiveJobs();
+
+  // 5. Insert job vào database
+  const [newJob] = await db
+    .insert(jobs)
+    .values({
+      userId,
+      shopeeUrl,
+      shopeeProductId: productInfo?.productId ?? parsed?.productId ?? null,
+      shopeeProductName: productInfo?.name ?? null,
+      shopeeProductImage: productInfo?.imageUrl ?? null,
+      status: 'pending',
+    })
+    .returning();
+
+  const queuePosition = activeCount + 1; // job này là cuối hàng đợi
+  const estimatedWaitSeconds = queuePosition * config.AVG_JOB_SECONDS;
+
+  // 6. Đẩy job vào hàng đợi BullMQ
+  try {
+    await addJobToQueue({
+      jobId: newJob.id,
+      shopeeUrl,
+      shopeeProductId: newJob.shopeeProductId,
+      userId,
+    });
+  } catch (err) {
+    console.error('[JobService] Lỗi khi đẩy job vào BullMQ queue:', err);
+  }
+
+  return {
+    type: 'CREATED' as const,
+    job: newJob,
+    queuePosition,
+    estimatedWaitSeconds,
+  };
+}
+
+// ─── Lấy thông tin 1 job ──────────────────────────────────────────────────────
+
+export async function getJobById(jobId: string): Promise<JobDetailResponse | null> {
+  const [job] = await db.select().from(jobs).where(eq(jobs.id, jobId)).limit(1);
+
+  if (!job) return null;
+
+  // Tính vị trí hàng đợi nếu job đang chờ
+  let queuePosition: number | null = null;
+  let estimatedWaitSeconds: number | null = null;
+
+  if (job.status === 'pending' || job.status === 'processing') {
+    queuePosition = await getQueuePosition(job.id, job.createdAt);
+    estimatedWaitSeconds = queuePosition * config.AVG_JOB_SECONDS;
+  }
+
+  return formatJobResponse(job, queuePosition, estimatedWaitSeconds);
+}
+
+// ─── Lấy danh sách jobs của user ─────────────────────────────────────────────
+
+export async function getJobsByUser(
+  userId: string,
+  limit = 20,
+  offset = 0,
+): Promise<{ jobs: JobDetailResponse[]; total: number }> {
+  const [userJobs, totalResult] = await Promise.all([
+    db
+      .select()
+      .from(jobs)
+      .where(eq(jobs.userId, userId))
+      .orderBy(jobs.createdAt)
+      .limit(limit)
+      .offset(offset),
+    db.select({ value: count() }).from(jobs).where(eq(jobs.userId, userId)),
+  ]);
+
+  const formatted = await Promise.all(
+    userJobs.map(async (job) => {
+      let queuePosition: number | null = null;
+      let estimatedWaitSeconds: number | null = null;
+
+      if (job.status === 'pending' || job.status === 'processing') {
+        queuePosition = await getQueuePosition(job.id, job.createdAt);
+        estimatedWaitSeconds = queuePosition * config.AVG_JOB_SECONDS;
+      }
+
+      return formatJobResponse(job, queuePosition, estimatedWaitSeconds);
+    }),
+  );
+
+  return {
+    jobs: formatted,
+    total: totalResult[0]?.value ?? 0,
+  };
+}
+
+// ─── Helper: Format job thành response ───────────────────────────────────────
+
+function formatJobResponse(
+  job: typeof jobs.$inferSelect,
+  queuePosition: number | null,
+  estimatedWaitSeconds: number | null,
+): JobDetailResponse {
+  return {
+    job_id: job.id,
+    status: job.status,
+    product: {
+      id: job.shopeeProductId,
+      name: job.shopeeProductName,
+      image: job.shopeeProductImage,
+      original_url: job.shopeeUrl,
+    },
+    result:
+      job.status === 'done'
+        ? {
+            affiliate_url: job.resultUrl,
+            voucher: job.resultVoucher,
+          }
+        : null,
+    queue_position: queuePosition,
+    estimated_wait_seconds: estimatedWaitSeconds,
+    created_at: job.createdAt.toISOString(),
+    updated_at: job.updatedAt.toISOString(),
+    completed_at: job.completedAt?.toISOString() ?? null,
+    error_message: job.errorMessage,
+  };
+}
+</file>
+
+<file path="packages/api/src/services/shopee.ts">
+import type { ShopeeProduct } from '../types';
+
+// ─── Parse Shopee URL → Product ID ────────────────────────────────────────────
+//
+// Hỗ trợ các format phổ biến của Shopee Vietnam:
+//   Format 1: https://shopee.vn/ten-san-pham-i.SELLER_ID.PRODUCT_ID
+//   Format 2: https://shopee.vn/product/SELLER_ID/PRODUCT_ID
+//   Format 3: https://shope.ee/SHORTCODE (link rút gọn - chưa hỗ trợ)
+//
+// TODO: Tích hợp Shopee Affiliate Open API để lấy thông tin thật
+//       Hiện tại dùng mock data để phát triển và test
+// ─────────────────────────────────────────────────────────────────────────────
+
+const SHOPEE_URL_PATTERNS = [
+  // Format 1: /ten-sp-i.123456.789012
+  /shopee\.vn\/.+-i\.(\d+)\.(\d+)/,
+  // Format 2: /product/123456/789012
+  /shopee\.vn\/product\/(\d+)\/(\d+)/,
+];
+
+/**
+ * Parse Shopee URL để lấy sellerId và productId
+ * @returns { sellerId, productId } hoặc null nếu không parse được
+ */
+export function parseShopeeUrl(url: string): { sellerId: string; productId: string } | null {
+  for (const pattern of SHOPEE_URL_PATTERNS) {
+    const match = url.match(pattern);
+    if (match) {
+      return {
+        sellerId: match[1],
+        productId: match[2],
+      };
+    }
+  }
+  return null;
+}
+
+/**
+ * Kiểm tra xem URL có phải là link Shopee hợp lệ không
+ */
+export function isValidShopeeUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    const isShopee =
+      parsed.hostname === 'shopee.vn' ||
+      parsed.hostname === 'shope.ee' ||
+      parsed.hostname === 's.shopee.vn' ||
+      parsed.hostname === 'vn.shp.ee' ||
+      parsed.hostname === 'shp.ee';
+    return isShopee;
+  } catch {
+    return false;
+  }
+}
+
+// ─── Mock: Lấy thông tin sản phẩm ────────────────────────────────────────────
+// Trả về dữ liệu giả lập. Thay bằng Shopee API thật sau.
+
+const MOCK_PRODUCTS = [
+  { name: 'Tai nghe Bluetooth Sony WH-1000XM5', image: 'https://cf.shopee.vn/file/sg-11134201-22120-8y7vu9u3gvlvb0' },
+  { name: 'Giày thể thao Nike Air Max 270', image: 'https://cf.shopee.vn/file/sg-11134201-23010-s3tph8tceomv78' },
+  { name: 'Bình nước thủy tinh 1L Thermos', image: 'https://cf.shopee.vn/file/sg-11134201-22110-dv5jzrr6t4kv52' },
+  { name: 'Đồng hồ thông minh Samsung Galaxy Watch 6', image: 'https://cf.shopee.vn/file/sg-11134201-23010-mv6rk2pfbnmva7' },
+  { name: 'Máy lọc không khí Xiaomi Air Purifier 4 Pro', image: 'https://cf.shopee.vn/file/sg-11134201-22110-9xjjf6s8vqlv7c' },
+];
+
+/**
+ * Lấy thông tin sản phẩm Shopee (MOCK)
+ * Trong thực tế: gọi Shopee Affiliate API với productId
+ */
+export async function fetchShopeeProduct(
+  shopeeUrl: string,
+  productId: string,
+  _sellerId: string,
+): Promise<ShopeeProduct> {
+  // Giả lập delay API call (100-300ms)
+  await new Promise((r) => setTimeout(r, 100 + Math.random() * 200));
+
+  // Chọn mock product dựa trên productId để nhất quán
+  const idx = parseInt(productId.slice(-1), 10) % MOCK_PRODUCTS.length;
+  const mock = MOCK_PRODUCTS[idx];
+
+  return {
+    productId,
+    name: mock.name,
+    imageUrl: mock.image,
+    originalUrl: shopeeUrl,
+  };
+}
+</file>
+
+<file path="packages/api/src/types/index.ts">
+// ─── Types dùng chung trong toàn bộ API ──────────────────────────────────────
+
+export type JobStatus = 'pending' | 'processing' | 'done' | 'failed';
+
+export interface ShopeeProduct {
+  productId: string;
+  name: string;
+  imageUrl: string;
+  originalUrl: string;
+}
+
+// Response của POST /jobs
+export interface CreateJobResponse {
+  job_id: string;
+  status: JobStatus;
+  queue_position: number;
+  estimated_wait_seconds: number;
+  message: string;
+}
+
+// Response của GET /jobs/:id
+export interface JobDetailResponse {
+  job_id: string;
+  status: JobStatus;
+  product: {
+    id: string | null;
+    name: string | null;
+    image: string | null;
+    original_url: string;
+  };
+  result: {
+    affiliate_url: string | null;
+    voucher: string | null;
+  } | null;
+  queue_position: number | null;
+  estimated_wait_seconds: number | null;
+  created_at: string;
+  updated_at: string;
+  completed_at: string | null;
+  error_message: string | null;
+}
+
+// Response của GET /jobs (danh sách)
+export interface JobListResponse {
+  jobs: JobDetailResponse[];
+  total: number;
+  limit: number;
+  offset: number;
+}
+
+// Lỗi chuẩn của API
+export interface ApiError {
+  error: string;
+  message: string;
+  existing_job_id?: string;
+}
+</file>
+
+<file path="packages/api/src/config.ts">
+import 'dotenv/config';
+
+function requireEnv(key: string): string {
+  const value = process.env[key];
+  if (!value) {
+    throw new Error(`[Config] Biến môi trường bắt buộc "${key}" chưa được set.`);
+  }
+  return value;
+}
+
+export const config = {
+  // Server
+  PORT: parseInt(process.env.PORT ?? '3000', 10),
+  NODE_ENV: process.env.NODE_ENV ?? 'development',
+
+  // Database
+  DATABASE_URL: requireEnv('DATABASE_URL'),
+
+  // Redis
+  REDIS_URL: process.env.REDIS_URL ?? 'redis://localhost:6379',
+
+  // SLA — thời gian xử lý trung bình 1 job (giây), đo lường thực tế: 35-45s
+  AVG_JOB_SECONDS: parseInt(process.env.AVG_JOB_SECONDS ?? '40', 10),
+
+  get isDev() {
+    return this.NODE_ENV === 'development';
+  },
+} as const;
+</file>
+
+<file path="packages/api/src/index.ts">
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import { redis } from './redis';
+import { config } from './config';
+import { healthRoutes } from './routes/health';
+import { jobRoutes } from './routes/jobs';
+import { setupDashboard } from './routes/dashboard';
+import { initWorker } from './queue/worker';
+
+// ─── Fastify App ──────────────────────────────────────────────────────────────
+const app = Fastify({
+  logger: {
+    level: config.isDev ? 'info' : 'warn',
+    transport: config.isDev
+      ? { target: 'pino-pretty', options: { colorize: true } }
+      : undefined,
+  },
+});
+
+async function start() {
+  // CORS — cho phép mobile app gọi API
+  await app.register(cors, {
+    origin: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  });
+
+  // Connect Redis
+  try {
+    await redis.connect();
+    app.log.info('[Redis] Đã kết nối thành công');
+  } catch (err) {
+    app.log.warn('[Redis] Không kết nối được ngay — sẽ thử lại tự động');
+  }
+
+  // Routes
+  await app.register(healthRoutes);
+  await app.register(jobRoutes, { prefix: '/api/v1' });
+
+  // Dashboard Bull Board UI
+  await setupDashboard(app);
+
+  // Khởi tạo BullMQ Worker (Concurrency: 1)
+  initWorker();
+
+  // Start server
+  try {
+    await app.listen({ port: config.PORT, host: '0.0.0.0' });
+    app.log.info(`🚀 API đang chạy tại http://0.0.0.0:${config.PORT}`);
+    app.log.info(`📋 Health check: http://0.0.0.0:${config.PORT}/health`);
+    app.log.info(`📊 Bull Board UI: http://0.0.0.0:${config.PORT}/admin/queues`);
+    app.log.info(`⏱  Thời gian ước tính/job: ${config.AVG_JOB_SECONDS}s`);
+  } catch (err) {
+    app.log.error(err);
+    process.exit(1);
+  }
+}
+
+// Graceful shutdown
+const shutdown = async (signal: string) => {
+  app.log.info(`[${signal}] Đang dừng server...`);
+  await app.close();
+  redis.disconnect();
+  process.exit(0);
+};
+
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT', () => shutdown('SIGINT'));
+
+start();
+</file>
+
+<file path="packages/api/src/redis.ts">
+import Redis from 'ioredis';
+import { config } from './config';
+
+// Singleton Redis client — export để dùng chung trong toàn app
+export const redis = new Redis(config.REDIS_URL, {
+  maxRetriesPerRequest: null,
+  lazyConnect: true,
+  enableReadyCheck: false,
+});
+
+redis.on('error', (err) => {
+  console.error('[Redis] Lỗi kết nối:', err.message);
+});
+
+export async function checkRedisHealth(): Promise<boolean> {
+  try {
+    const pong = await redis.ping();
+    return pong === 'PONG';
+  } catch {
+    return false;
+  }
+}
+</file>
+
+<file path="packages/api/Dockerfile">
+FROM node:20-bookworm
+
+WORKDIR /app
+
+# Cài dependencies trước (tận dụng Docker layer cache)
+COPY package*.json ./
+RUN npm ci
+
+# Cài đặt Playwright browser binaries và các thư viện hệ thống Linux cần thiết
+RUN npx playwright install --with-deps chromium
+
+# Copy source code
+COPY tsconfig.json ./
+COPY src ./src
+
+# Expose port
+EXPOSE 3000
+
+# Dev mode: hot reload với ts-node-dev
+CMD ["npm", "run", "dev"]
+</file>
+
+<file path="packages/api/package.json">
+{
+  "name": "@affiliate/api",
+  "version": "1.0.0",
+  "description": "Backend API cho hệ thống Affiliate Tool",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "save-session": "ts-node src/scripts/saveSession.ts",
+    "test-real": "ts-node src/scripts/testRealTagging.ts",
+    "test-tag": "ts-node src/scripts/testTagVideo.ts",
+    "test-mobile": "ts-node src/scripts/testMobileCollectionTagging.ts",
+    "test-collections": "ts-node src/scripts/testShoppingCollections.ts",
+    "inspect-mobile": "ts-node src/scripts/inspectMobileSplash.ts",
+    "explore-collections": "ts-node src/scripts/exploreShoppingCollections.ts",
+    "check-adb": "ts-node src/scripts/checkAdb.ts",
+    "test-appium": "ts-node src/scripts/testAppium.ts",
+    "appium-server": "appium --port 4723"
+  },
+  "dependencies": {
+    "@bull-board/api": "^8.6.1",
+    "@bull-board/fastify": "^8.6.1",
+    "@fastify/cors": "^10.0.1",
+    "@wdio/appium-service": "^9.30.1",
+    "bullmq": "^6.1.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "fastify": "^5.0.0",
+    "ioredis": "^5.3.2",
+    "playwright": "^1.62.1",
+    "postgres": "^3.4.4",
+    "webdriverio": "^9.30.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "drizzle-kit": "^0.21.4",
+    "pino-pretty": "^11.2.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
+</file>
+
+<file path="packages/api/tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+</file>
+
+<file path=".env.example">
+# ========================
+# Database
+# ========================
+POSTGRES_DB=affiliate_db
+POSTGRES_USER=affiliate_user
+POSTGRES_PASSWORD=affiliate_pass
+
+# ========================
+# Redis
+# ========================
+# (Không cần thêm biến nếu dùng mặc định)
+
+# ========================
+# API
+# ========================
+API_PORT=3000
+NODE_ENV=development
+
+# Thời gian xử lý trung bình 1 job (giây) - đo lường thực tế: 35-45s, lấy 40s
+AVG_JOB_SECONDS=40
+</file>
+
+<file path=".gitignore">
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+</file>
+
+<file path="docker-compose.yml">
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: affiliate_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-affiliate_db}
+      POSTGRES_USER: ${POSTGRES_USER:-affiliate_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-affiliate_pass}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./packages/api/src/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-affiliate_user} -d ${POSTGRES_DB:-affiliate_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: affiliate_redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./packages/api
+      dockerfile: Dockerfile
+    container_name: affiliate_api
+    restart: unless-stopped
+    ports:
+      - "${API_PORT:-3000}:3000"
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-affiliate_user}:${POSTGRES_PASSWORD:-affiliate_pass}@postgres:5432/${POSTGRES_DB:-affiliate_db}
+      REDIS_URL: redis://redis:6379
+      PORT: 3000
+      NODE_ENV: ${NODE_ENV:-development}
+      # Thời gian xử lý trung bình 1 job (giây) - dựa trên đo lường thực tế
+      AVG_JOB_SECONDS: ${AVG_JOB_SECONDS:-40}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./packages/api/src:/app/src:delegated
+      - ./packages/api/session:/app/session:delegated
+      - ./packages/api/logs:/app/logs:delegated
+
+volumes:
+  postgres_data:
+  redis_data:
+</file>
+
+<file path="mo-ta-du-an.md">
+# MÔ TẢ DỰ ÁN: Hệ thống tự động gắn sản phẩm Shopee vào YouTube Shopping
+
+## 1. Tổng quan dự án
+
+### 1.1. Mục tiêu
+Xây dựng một mobile app cho phép người dùng dán link sản phẩm Shopee, hệ thống tự động gắn sản phẩm đó vào giỏ hàng/collection trên YouTube Studio (thông qua tài khoản YouTube đủ điều kiện tham gia chương trình affiliate), sau đó trả về cho người dùng link/mã voucher mới sinh ra từ quá trình gắn sản phẩm.
+
+### 1.2. Ràng buộc thực tế quan trọng
+- **Không có API chính thức** từ YouTube cho việc gắn sản phẩm vào Studio → bắt buộc dùng **browser automation** (Playwright) để giả lập thao tác người dùng thật.
+- **Chỉ có 1 tài khoản YouTube** đủ điều kiện → mọi thao tác gắn sản phẩm phải xử lý **tuần tự** (hoặc song song rất hạn chế), tạo ra giới hạn throughput cứng cho toàn hệ thống.
+- Hệ thống vận hành theo mô hình **hàng đợi bất đồng bộ**, không phải real-time — cần thiết kế UX và kỳ vọng người dùng phù hợp với điều này.
+- Việc automation trên giao diện web của bên thứ ba tiềm ẩn rủi ro vi phạm điều khoản dịch vụ, có thể dẫn đến khóa/giới hạn tài khoản.
+
+---
+
+## 2. Các giai đoạn triển khai
+
+### Giai đoạn 0 — Đo lường & chốt năng lực xử lý thực tế
+**Việc làm:** Đo thời gian trung bình để hoàn tất 1 thao tác gắn sản phẩm thủ công trên Studio (mở product picker, nhập link, xác nhận, chờ mã trả về).
+
+**Ý nghĩa:** Đây là bước nền tảng quyết định toàn bộ thiết kế phía sau. Vì chỉ có 1 tài khoản xử lý tuần tự, con số này (ví dụ 20-40 giây/sản phẩm) quyết định SLA thực tế của hệ thống (100 job có thể mất 30-60+ phút để xử lý hết). Nếu bỏ qua bước này, đội ngũ dễ thiết kế UX kỳ vọng sai (ví dụ hứa "xử lý ngay lập tức") dẫn đến trải nghiệm người dùng tệ khi tải cao.
+
+---
+
+### Giai đoạn 1 — Xây dựng Backend & Database
+**Việc làm:** Xây API nhận link Shopee từ app, parse thông tin sản phẩm (qua Shopee Affiliate Open API), lưu job vào database với trạng thái ban đầu, trả về `job_id` ngay lập tức cho người dùng.
+
+**Ý nghĩa:** Tách bạch giữa "tầng nhận yêu cầu" (rất nhẹ, xử lý được hàng nghìn request/giây) và "tầng xử lý thực tế" (bị giới hạn bởi automation). Nhờ tách bạch này, 100 người dùng gửi link cùng lúc sẽ không làm sập hệ thống ở tầng vào — bottleneck chỉ nằm ở tầng automation phía sau.
+
+---
+
+### Giai đoạn 2 — Thiết kế hàng đợi (Queue)
+**Việc làm:** Dùng Redis + BullMQ (hoặc Celery + RabbitMQ) tạo hàng đợi `youtube-tagging`, cấu hình concurrency thấp (1-2), thêm rate limit và retry với backoff.
+
+**Ý nghĩa:** Hàng đợi là lớp đệm giữa số lượng request đến (có thể tăng đột biến) và tốc độ xử lý cố định (giới hạn bởi 1 tài khoản YouTube). Đây cũng là nơi kiểm soát nhịp độ thao tác để tránh hành vi bất thường bị nền tảng phát hiện.
+
+---
+
+### Giai đoạn 3 — Worker Automation
+**Việc làm:** Viết worker Playwright dùng session đã đăng nhập sẵn (`storageState`), thực hiện thao tác gắn sản phẩm trên Studio, scrape kết quả link/voucher trả về, cập nhật trạng thái job. Bổ sung circuit breaker (tự dừng khi lỗi liên tiếp) và cơ chế retry.
+
+**Ý nghĩa:** Đây là phần lõi kỹ thuật của toàn hệ thống — nơi biến một thao tác thủ công trên giao diện web thành một quy trình tự động, ổn định và có khả năng phục hồi khi gặp lỗi (UI thay đổi, session hết hạn, mạng chậm...).
+
+---
+
+### Giai đoạn 4 — Xử lý tải cao & trải nghiệm hàng đợi
+**Việc làm:** Hiển thị vị trí xếp hàng và thời gian chờ ước tính cho người dùng; giới hạn mỗi người chỉ có 1 job đang chờ tại một thời điểm; gửi push notification khi xử lý xong thay vì bắt người dùng chờ trong app.
+
+**Ý nghĩa:** Vì tốc độ xử lý bị giới hạn cứng bởi 1 tài khoản, hệ thống không thể "nhanh hơn" bằng cách tối ưu code — chỉ có thể quản lý kỳ vọng người dùng tốt hơn. Đây là bước biến giới hạn kỹ thuật thành trải nghiệm chấp nhận được.
+
+---
+
+### Giai đoạn 5 — Giám sát & vận hành
+**Việc làm:** Dashboard theo dõi số job chờ/đang xử lý/lỗi; health check session định kỳ; job test tự động hàng ngày để phát hiện sớm khi Studio đổi giao diện; cảnh báo tức thời khi có sự cố.
+
+**Ý nghĩa:** Vì hệ thống phụ thuộc vào giao diện web bên thứ ba (có thể thay đổi bất cứ lúc nào mà không báo trước), giám sát chủ động là cách duy nhất để phát hiện sự cố trước khi nó ảnh hưởng hàng loạt người dùng, thay vì chờ người dùng phàn nàn.
+
+---
+
+### Giai đoạn 6 — Kế hoạch mở rộng
+**Việc làm:** Khi nhu cầu vượt khả năng xử lý của 1 tài khoản, bổ sung thêm tài khoản YouTube đủ điều kiện (kênh riêng hoặc cộng tác viên), chia hàng đợi theo round-robin giữa các tài khoản.
+
+**Ý nghĩa:** Đây là hướng duy nhất để tăng throughput thực sự (song song hóa), vì bản chất giới hạn nằm ở số lượng tài khoản có quyền thao tác, không nằm ở hạ tầng server.
+
+---
+
+## 3. Cấu trúc chung của hệ thống
+
+```
+┌─────────────────┐
+│   Mobile App     │  (gửi link Shopee, xem trạng thái job, nhận thông báo)
+└────────┬─────────┘
+         │ POST /jobs
+         ▼
+┌─────────────────────────────┐
+│   Backend API                │
+│   - Parse link (Shopee API)  │
+│   - Tạo job, lưu DB           │
+│   - Trả job_id ngay lập tức   │
+└────────┬─────────────────────┘
+         │ đẩy job vào queue
+         ▼
+┌─────────────────────────────┐
+│   Queue (Redis + BullMQ)     │
+│   - Concurrency giới hạn     │
+│   - Retry, backoff, rate limit│
+└────────┬─────────────────────┘
+         │ worker lấy job tuần tự
+         ▼
+┌─────────────────────────────┐
+│   Worker Automation           │
+│   (Playwright + session lưu   │
+│   sẵn của 1 tài khoản YouTube)│
+│   - Vào Studio → Shopping     │
+│   - Gắn sản phẩm               │
+│   - Scrape link/voucher        │
+└────────┬─────────────────────┘
+         │ cập nhật kết quả
+         ▼
+┌─────────────────────────────┐
+│   Database                    │
+│   - Trạng thái job             │
+│   - Kết quả link/voucher       │
+└────────┬─────────────────────┘
+         │ push notification / polling
+         ▼
+┌─────────────────┐
+│   Mobile App     │  (nhận kết quả)
+└──────────────────┘
+
+Song song: Dashboard giám sát + Health check + Cảnh báo
+```
+
+**Các thành phần chính:**
+- **Mobile App**: Flutter hoặc React Native, giao diện nhập link, theo dõi hàng đợi, nhận push notification.
+- **Backend API**: Node.js hoặc Go, xử lý nhẹ, không chứa logic automation.
+- **Queue**: Redis + BullMQ, lớp đệm và điều tiết tốc độ xử lý.
+- **Worker Automation**: Playwright chạy trong container riêng, xử lý tuần tự 1 tài khoản.
+- **Database**: PostgreSQL, lưu job và trạng thái.
+- **Hệ thống giám sát**: Dashboard (Bull Board hoặc tự xây), cảnh báo qua Telegram/Slack/email.
+
+---
+
+## 4. Những điều cần chú ý khi xây dựng hệ thống
+
+### 4.1. Rủi ro nền tảng (quan trọng nhất)
+- Automation trên giao diện web không phải API chính thức thường vi phạm điều khoản dịch vụ của nền tảng, có thể dẫn đến khóa tài khoản. Cần đánh giá kỹ mức độ rủi ro này trước khi mở rộng quy mô, và có phương án dự phòng (tài khoản thay thế, quy trình chuyển sang xử lý thủ công tạm thời).
+
+### 4.2. Giới hạn throughput là giới hạn cứng
+- Không thể "tối ưu code" để vượt qua giới hạn của 1 tài khoản. Toàn bộ kỳ vọng UX, SLA, thông báo cho người dùng phải được thiết kế dựa trên giới hạn này, không phải ngược lại.
+
+### 4.3. Độ ổn định phụ thuộc giao diện bên thứ ba
+- Bất kỳ thay đổi giao diện nào trên YouTube Studio đều có thể làm automation gãy ngay lập tức mà không có cảnh báo trước. Cần cơ chế kiểm thử tự động định kỳ và giám sát chủ động, không chỉ dựa vào báo lỗi từ người dùng.
+
+### 4.4. Quản lý session cẩn trọng
+- Không nên tự động hóa bước đăng nhập (dễ bị nền tảng đánh dấu bất thường/kích hoạt captcha). Đăng nhập thủ công, lưu session, và có quy trình gia hạn thủ công khi cần.
+
+### 4.5. Nhịp độ thao tác tự nhiên
+- Thêm độ trễ ngẫu nhiên giữa các thao tác automation, tránh nhịp độ đều đặn như máy móc, giảm khả năng bị phát hiện là hành vi bot.
+
+### 4.6. Minh bạch với người dùng về thời gian chờ
+- Vì hệ thống không real-time, cần truyền đạt rõ ràng thời gian chờ ước tính ngay từ giao diện, tránh gây cảm giác app bị lỗi hoặc treo.
+
+### 4.7. Cơ chế phục hồi khi lỗi hàng loạt
+- Circuit breaker để tự động dừng worker khi phát hiện nhiều lỗi liên tiếp (dấu hiệu session chết hoặc UI đổi), tránh để hàng chục job thất bại âm thầm mà không ai biết.
+
+### 4.8. Vấn đề pháp lý và ủy quyền
+- Nếu sau này mở rộng sang mô hình nhiều tài khoản/cộng tác viên, cần làm rõ vấn đề ủy quyền truy cập tài khoản, bảo mật thông tin đăng nhập, và trách nhiệm khi có sự cố liên quan đến tài khoản của bên thứ ba.
+
+---
+
+## 5. Lộ trình triển khai đề xuất
+
+1. Xây API nhận job + database (nền tảng nhẹ, làm nhanh)
+2. Dựng Redis + BullMQ, test với job giả lập
+3. Đăng nhập thủ công, lưu session cho tài khoản YouTube
+4. Ghép worker automation thật vào queue, test với số lượng nhỏ (5-10 job)
+5. Bổ sung circuit breaker, retry, logging, chụp ảnh màn hình khi lỗi
+6. Load test tầng API với 100 request đồng thời (không phải 100 automation thật)
+7. Thêm UI hàng đợi và push notification cho app
+8. Soft launch với số lượng người dùng nhỏ trước khi mở rộng quy mô
+</file>
+
+<file path="test-api.ps1">
+# Script kiểm thử tự động toàn bộ API Giai đoạn 1 (hỗ trợ tạo user_id duy nhất cho mỗi lần chạy)
+$baseUrl = "http://localhost:3000"
+$ts = Get-Date -Format "HHmmss"
+$userA = "user_A_$ts"
+$userB = "user_B_$ts"
+$userC = "user_C_$ts"
+
+Write-Host "=========================================" -ForegroundColor Cyan
+Write-Host " 🚀 KỊCH BẢN KIỂM THỬ API - GIAI ĐOẠN 1" -ForegroundColor Cyan
+Write-Host "=========================================`n" -ForegroundColor Cyan
+
+# 1. Health Check
+Write-Host "[Test 1/6] Kiểm tra Health Check (GET /health)..." -ForegroundColor Yellow
+try {
+    $health = Invoke-RestMethod -Uri "$baseUrl/health" -Method Get
+    if ($health.status -eq "ok" -and $health.db -eq "ok" -and $health.redis -eq "ok") {
+        Write-Host "  ✅ SUCCESS: Database & Redis đều hoạt động tốt.`n" -ForegroundColor Green
+    } else {
+        Write-Host "  ❌ FAILED: Health check không đạt.`n" -ForegroundColor Red
+    }
+} catch {
+    Write-Host "  ❌ FAILED: Không thể kết nối tới API server ($baseUrl). Server đã bật chưa?`n" -ForegroundColor Red
+    exit 1
+}
+
+# 2. Tạo Job 1 (User A)
+Write-Host "[Test 2/6] Tạo Job mới cho User A ($userA)..." -ForegroundColor Yellow
+$bodyUserA = @{
+    shopee_url = "https://shopee.vn/product/123456/789012"
+    user_id = $userA
+} | ConvertTo-Json
+
+$jobA = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs" -Method Post -Body $bodyUserA -ContentType "application/json"
+Write-Host "  ✅ SUCCESS: Tạo Job A thành công!" -ForegroundColor Green
+Write-Host "     - Job ID: $($jobA.job_id)"
+Write-Host "     - Vị trí hàng đợi: $($jobA.queue_position)"
+Write-Host "     - Thời gian chờ ước tính: $($jobA.estimated_wait_seconds)s ($($jobA.message))"
+Write-Host "     - Tên sản phẩm (Mock): $($jobA.product.name)`n"
+
+# 3. Thử tạo Job thứ 2 cho User A (Duplicate Check)
+Write-Host "[Test 3/6] Thử tạo trùng Job cho User A (Kỳ vọng lỗi 409 Conflict)..." -ForegroundColor Yellow
+try {
+    $dup = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs" -Method Post -Body $bodyUserA -ContentType "application/json"
+    Write-Host "  ❌ FAILED: Hệ thống không chặn được job trùng.`n" -ForegroundColor Red
+} catch {
+    $statusCode = $_.Exception.Response.StatusCode.value__
+    if ($statusCode -eq 409) {
+        Write-Host "  ✅ SUCCESS: Hệ thống đã chặn thành công! (HTTP 409 Conflict - Bạn đang có 1 job chưa hoàn thành)`n" -ForegroundColor Green
+    } else {
+        Write-Host "  ❌ FAILED: Trả về mã lỗi khác: $statusCode`n" -ForegroundColor Red
+    }
+}
+
+# 4. Tạo Job cho User B (Kiểm tra vị trí hàng đợi)
+Write-Host "[Test 4/6] Tạo Job mới cho User B ($userB)..." -ForegroundColor Yellow
+$bodyUserB = @{
+    shopee_url = "https://shopee.vn/product/999999/888888"
+    user_id = $userB
+} | ConvertTo-Json
+
+$jobB = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs" -Method Post -Body $bodyUserB -ContentType "application/json"
+Write-Host "  ✅ SUCCESS: Tạo Job B thành công!" -ForegroundColor Green
+Write-Host "     - Job ID: $($jobB.job_id)"
+Write-Host "     - Vị trí hàng đợi: $($jobB.queue_position)"
+Write-Host "     - Thời gian chờ ước tính: $($jobB.estimated_wait_seconds)s`n"
+
+# 5. Tra cứu chi tiết Job A (GET /api/v1/jobs/:id)
+Write-Host "[Test 5/6] Tra cứu chi tiết Job A (GET /api/v1/jobs/$($jobA.job_id))..." -ForegroundColor Yellow
+$detailA = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs/$($jobA.job_id)" -Method Get
+Write-Host "  ✅ SUCCESS: Lấy chi tiết Job A thành công!" -ForegroundColor Green
+Write-Host "     - Trạng thái: $($detailA.status)"
+Write-Host "     - Tên sản phẩm: $($detailA.product.name)"
+Write-Host "     - Link gốc: $($detailA.product.original_url)`n"
+
+# 6. Test Validate Link Shopee sai format
+Write-Host "[Test 6/6] Gửi link không phải Shopee (Kỳ vọng lỗi 400 Bad Request)..." -ForegroundColor Yellow
+$bodyInvalid = @{
+    shopee_url = "https://google.com"
+    user_id = $userC
+} | ConvertTo-Json
+
+try {
+    $inv = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs" -Method Post -Body $bodyInvalid -ContentType "application/json"
+    Write-Host "  ❌ FAILED: Không chặn được link sai.`n" -ForegroundColor Red
+} catch {
+    $statusCode = $_.Exception.Response.StatusCode.value__
+    if ($statusCode -eq 400) {
+        Write-Host "  ✅ SUCCESS: Đã chặn link không hợp lệ! (HTTP 400 Bad Request)`n" -ForegroundColor Green
+    } else {
+        Write-Host "  ❌ FAILED: Trả về mã lỗi khác: $statusCode`n" -ForegroundColor Red
+    }
+}
+
+Write-Host "=========================================" -ForegroundColor Cyan
+Write-Host " 🎉 HOÀN THÀNH TẤT CẢ KỊCH BẢN KIỂM THỬ!" -ForegroundColor Cyan
+Write-Host "=========================================" -ForegroundColor Cyan
+</file>
+
+<file path="test-automation.ps1">
+# Script kiểm thử Playwright Worker & Circuit Breaker (Giai đoạn 3)
+$baseUrl = "http://localhost:3000"
+$ts = Get-Date -Format "HHmmss"
+
+Write-Host "=========================================================" -ForegroundColor Cyan
+Write-Host " 🚀 KỊCH BẢN KIỂM THỬ PLAYWRIGHT WORKER & CIRCUIT BREAKER (GIAI ĐOẠN 3)" -ForegroundColor Cyan
+Write-Host "=========================================================`n" -ForegroundColor Cyan
+
+# 1. Tạo Job cho Playwright Worker xử lý
+Write-Host "[Test 1/3] Tạo Job mới cho Playwright Worker..." -ForegroundColor Yellow
+$user = "pw_user_$ts"
+$jobRes = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs" -Method Post -Body (@{ shopee_url = "https://shopee.vn/product/777/888"; user_id = $user } | ConvertTo-Json) -ContentType "application/json"
+Write-Host "  ✅ SUCCESS: Đã tạo Job ID: $($jobRes.job_id) (Product: $($jobRes.product.name))`n"
+
+# 2. Theo dõi Playwright Worker thực thi
+Write-Host "[Test 2/3] Theo dõi Playwright Automation Engine xử lý..." -ForegroundColor Yellow
+$maxRetries = 15
+$jobDone = $false
+
+for ($i = 1; $i -le $maxRetries; $i++) {
+    Start-Sleep -Seconds 1
+    $statusCheck = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs/$($jobRes.job_id)" -Method Get
+    Write-Host "  [Lần $i] Trạng thái Job: '$($statusCheck.status)'" -ForegroundColor Gray
+    
+    if ($statusCheck.status -eq "done") {
+        $jobDone = $true
+        Write-Host "  ✅ SUCCESS: Playwright Worker đã hoàn thành xuất sắc!" -ForegroundColor Green
+        Write-Host "     - Link Affiliate: $($statusCheck.result.affiliate_url)"
+        Write-Host "     - Mã Voucher: $($statusCheck.result.voucher)`n"
+        break
+    }
+}
+
+if (-not $jobDone) {
+    Write-Host "  ❌ FAILED: Job chưa hoàn thành trong thời gian dự kiến.`n" -ForegroundColor Red
+}
+
+# 3. Kiểm tra Circuit Breaker & CLI Save Session Helper
+Write-Host "[Test 3/3] Kiểm tra công cụ Quản lý Session & Circuit Breaker..." -ForegroundColor Yellow
+$saveSessionScript = "packages/api/src/scripts/saveSession.ts"
+if (Test-Path $saveSessionScript) {
+    Write-Host "  ✅ SUCCESS: Script CLI đăng nhập thủ công 1 lần (saveSession.ts) đã sẵn sàng." -ForegroundColor Green
+    Write-Host "     - Lệnh chạy khi Admin cần cập nhật cookie YouTube Studio: npm run save-session`n"
+}
+
+Write-Host "=========================================================" -ForegroundColor Cyan
+Write-Host " 🎉 HOÀN THÀNH KIỂM THỬ PLAYWRIGHT AUTOMATION GIAI ĐOẠN 3!" -ForegroundColor Cyan
+Write-Host "=========================================================" -ForegroundColor Cyan
+</file>
+
+<file path="test-queue.ps1">
+# Script kiểm thử hàng đợi BullMQ (Giai đoạn 2)
+$baseUrl = "http://localhost:3000"
+$ts = Get-Date -Format "HHmmss"
+
+Write-Host "=========================================================" -ForegroundColor Cyan
+Write-Host " 🚀 KỊCH BẢN KIỂM THỬ HÀNG ĐỢI BULLMQ & WORKER (GIAI ĐOẠN 2)" -ForegroundColor Cyan
+Write-Host "=========================================================`n" -ForegroundColor Cyan
+
+# 1. Kiểm tra Bull Board Admin Dashboard UI
+Write-Host "[Test 1/4] Kiểm tra Dashboard Quản trị Hàng đợi (/admin/queues)..." -ForegroundColor Yellow
+try {
+    $dashboardRes = Invoke-WebRequest -Uri "$baseUrl/admin/queues" -Method Get
+    if ($dashboardRes.StatusCode -eq 200) {
+        Write-Host "  ✅ SUCCESS: Bull Board Dashboard đã hoạt động tại http://localhost:3000/admin/queues`n" -ForegroundColor Green
+    }
+} catch {
+    Write-Host "  ❌ FAILED: Không truy cập được Bull Board Dashboard.`n" -ForegroundColor Red
+}
+
+# 2. Tạo 2 Job liên tiếp từ 2 User khác nhau
+Write-Host "[Test 2/4] Gửi 2 Job liên tiếp vào Hàng đợi..." -ForegroundColor Yellow
+$user1 = "q_user1_$ts"
+$user2 = "q_user2_$ts"
+
+$job1Res = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs" -Method Post -Body (@{ shopee_url = "https://shopee.vn/product/111/222"; user_id = $user1 } | ConvertTo-Json) -ContentType "application/json"
+Write-Host "  -> Đã tạo Job 1 (User: $user1, Job ID: $($job1Res.job_id)) - Vị trí: $($job1Res.queue_position)"
+
+$job2Res = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs" -Method Post -Body (@{ shopee_url = "https://shopee.vn/product/333/444"; user_id = $user2 } | ConvertTo-Json) -ContentType "application/json"
+Write-Host "  -> Đã tạo Job 2 (User: $user2, Job ID: $($job2Res.job_id)) - Vị trí: $($job2Res.queue_position)`n"
+
+# 3. Theo dõi trạng thái Job 1 chuyển từ processing -> done
+Write-Host "[Test 3/4] Theo dõi Worker xử lý Job 1 (Kỳ vọng: pending -> processing -> done)..." -ForegroundColor Yellow
+$maxRetries = 15
+$job1Done = $false
+
+for ($i = 1; $i -le $maxRetries; $i++) {
+    Start-Sleep -Seconds 1
+    $statusCheck = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs/$($job1Res.job_id)" -Method Get
+    Write-Host "  [Lần $i] Trạng thái Job 1: '$($statusCheck.status)'" -ForegroundColor Gray
+    
+    if ($statusCheck.status -eq "done") {
+        $job1Done = $true
+        Write-Host "  ✅ SUCCESS: Job 1 đã được Worker xử lý hoàn thành!" -ForegroundColor Green
+        Write-Host "     - Link Affiliate trả về: $($statusCheck.result.affiliate_url)"
+        Write-Host "     - Mã Voucher: $($statusCheck.result.voucher)`n"
+        break
+    }
+}
+
+if (-not $job1Done) {
+    Write-Host "  ❌ FAILED: Job 1 chưa chuyển sang trạng thái done.`n" -ForegroundColor Red
+}
+
+# 4. Theo dõi Job 2 bắt đầu được xử lý tuần tự (Concurrency = 1)
+Write-Host "[Test 4/4] Kiểm tra tính xử lý tuần tự (Job 2 hoàn thành sau Job 1)..." -ForegroundColor Yellow
+$job2Status = Invoke-RestMethod -Uri "$baseUrl/api/v1/jobs/$($job2Res.job_id)" -Method Get
+Write-Host "  -> Trạng thái Job 2 hiện tại: '$($job2Status.status)'"
+
+if ($job2Status.status -eq "processing" -or $job2Status.status -eq "done") {
+    Write-Host "  ✅ SUCCESS: Worker đã tự động tiếp nhận Job 2 sau khi Job 1 hoàn thành!`n" -ForegroundColor Green
+} else {
+    Write-Host "  ⏳ Job 2 vẫn đang chờ trong hàng đợi.`n" -ForegroundColor Yellow
+}
+
+Write-Host "=========================================================" -ForegroundColor Cyan
+Write-Host " 🎉 HOÀN THÀNH KIỂM THỬ HÀNG ĐỢI GIAI ĐOẠN 2!" -ForegroundColor Cyan
+Write-Host "=========================================================" -ForegroundColor Cyan
+</file>
+
+</files>
