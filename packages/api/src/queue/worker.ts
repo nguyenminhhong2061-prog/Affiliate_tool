@@ -29,7 +29,7 @@ async function processYoutubeTaggingJob(job: Job<YoutubeTaggingJobData>) {
 
   await job.updateProgress(20);
 
-  // 3. Thực thi Playwright Automation Engine
+  // 3. Thực thi Appium + Playwright Automation Pipeline
   try {
     const result = await tagShopeeProductOnYoutube({
       jobId,
@@ -105,6 +105,6 @@ export function initWorker() {
     console.error('[Worker System Error]:', err.message);
   });
 
-  console.log('⚡ [Worker] Playwright Worker đã sẵn sàng (Concurrency: 1)');
+  console.log('⚡ [Worker] Appium + Playwright Worker đã sẵn sàng (Concurrency: 1)');
   return worker;
 }
