@@ -15,8 +15,9 @@ CREATE TABLE IF NOT EXISTS jobs (
   shopee_product_name  VARCHAR(500),
   shopee_product_image TEXT,
   status               job_status   NOT NULL DEFAULT 'pending',
-  result_url           TEXT,
-  result_voucher       VARCHAR(100),
+  -- Link affiliate KHÔNG lưu ở đây: link có hạn sử dụng nên được giữ tạm trong
+  -- Redis kèm TTL (xem src/services/jobResult.ts). Lưu vĩnh viễn vào DB sẽ trả
+  -- link đã hết hiệu lực cho người dùng.
   error_message        TEXT,
   created_at           TIMESTAMPTZ  NOT NULL DEFAULT NOW(),
   updated_at           TIMESTAMPTZ  NOT NULL DEFAULT NOW(),

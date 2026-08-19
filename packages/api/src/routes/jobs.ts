@@ -31,9 +31,19 @@ const GetJobsQuery = z.object({
 // ─── Helper: format thời gian chờ sang dạng đọc được ─────────────────────────
 
 function formatWaitTime(seconds: number): string {
-  if (seconds < 60) return `~${seconds} giây`;
-  const minutes = Math.ceil(seconds / 60);
+  // Dưới 2 phút thì nói bằng giây.
+  //
+  // Bản trước đổi sang phút ngay từ 60 giây và làm tròn LÊN, nên một job 75 giây
+  // hiện ra là "~2 phút" — thừa 60%. Chuyện đó vô hại khi job còn mất 120 giây,
+  // nhưng sau đợt tối ưu 2026-08-16 job chỉ còn ~70 giây, và lúc đó phần lớn ước
+  // tính rơi đúng vào vùng bị làm tròn hỏng. Ước tính sai theo hướng nào cũng là
+  // sai (CLAUDE.md §10.6).
+  if (seconds < 120) return `~${seconds} giây`;
+
+  // Từ 2 phút trở lên: làm tròn tới phút gần nhất thay vì luôn làm tròn lên.
+  const minutes = Math.round(seconds / 60);
   if (minutes < 60) return `~${minutes} phút`;
+
   const hours = Math.floor(minutes / 60);
   const remainMin = minutes % 60;
   return remainMin > 0 ? `~${hours} giờ ${remainMin} phút` : `~${hours} giờ`;
@@ -57,6 +67,14 @@ export async function jobRoutes(app: FastifyInstance) {
 
     try {
       const result = await createJob(user_id, shopee_url);
+
+      if (result.type === 'QUEUE_ERROR') {
+        return reply.status(503).send({
+          error: 'QUEUE_UNAVAILABLE',
+          message:
+            'Hệ thống hàng đợi đang không sẵn sàng, job chưa được tiếp nhận. Vui lòng thử lại sau ít phút.',
+        });
+      }
 
       if (result.type === 'DUPLICATE_JOB') {
         return reply.status(409).send({

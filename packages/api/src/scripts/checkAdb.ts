@@ -13,11 +13,11 @@ async function checkAdb() {
   console.log(`  ADB path: ${automationEnv.ADB_PATH}`);
 
   console.log('\n[1] ADB Version:');
-  const version = runAdb('version');
+  const version = await runAdb('version');
   console.log(version.trim() || '(không chạy được adb — kiểm tra ADB_PATH)');
 
   console.log('\n[2] Danh sách thiết bị:');
-  const devices = listConnectedDevices();
+  const devices = await listConnectedDevices();
 
   if (devices.length === 0) {
     console.log('  (trống)');
@@ -39,17 +39,17 @@ async function checkAdb() {
   const firstSerial = devices[0];
   console.log(`\n[3] Thông tin thiết bị: ${firstSerial}`);
 
-  const manufacturer = runAdb('shell getprop ro.product.manufacturer', firstSerial);
-  const model = runAdb('shell getprop ro.product.model', firstSerial);
-  const androidVersion = runAdb('shell getprop ro.build.version.release', firstSerial);
-  const apiLevel = runAdb('shell getprop ro.build.version.sdk', firstSerial);
+  const manufacturer = await runAdb('shell getprop ro.product.manufacturer', firstSerial);
+  const model = await runAdb('shell getprop ro.product.model', firstSerial);
+  const androidVersion = await runAdb('shell getprop ro.build.version.release', firstSerial);
+  const apiLevel = await runAdb('shell getprop ro.build.version.sdk', firstSerial);
 
   console.log(`  Hãng: ${manufacturer}`);
   console.log(`  Model: ${model}`);
   console.log(`  Android: ${androidVersion} (API ${apiLevel})`);
 
   console.log('\n[4] Kiểm tra YouTube Studio app:');
-  if (isYoutubeStudioInstalled(firstSerial)) {
+  if (await isYoutubeStudioInstalled(firstSerial)) {
     console.log('  ✅ YouTube Studio đã cài (com.google.android.apps.youtube.creator)');
   } else {
     console.log('  ⚠️ Không tìm thấy YouTube Studio. Hãy cài từ Play Store.');

@@ -11,7 +11,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./packages/api/src/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     ports:
-      - "5432:5432"
+      # Cổng host 5433 vì máy dev đã có PostgreSQL cài sẵn chiếm 5432.
+      # Bên trong mạng docker các service vẫn gọi nhau qua postgres:5432.
+      - "${POSTGRES_HOST_PORT:-5433}:5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-affiliate_user} -d ${POSTGRES_DB:-affiliate_db}"]
       interval: 5s
@@ -33,12 +35,23 @@ services:
       timeout: 5s
       retries: 10
 
+  # ⚠️ KHÔNG dùng container này cho worker: nó không với tới điện thoại Android
+  # qua USB (adb/Appium chạy trên host). Giữ lại chỉ để build/kiểm tra image.
+  #
+  # `profiles` khiến `docker compose up -d` KHÔNG khởi động nó, và `restart: "no"`
+  # khiến Docker Desktop không tự bật lại sau khi khởi động máy. Trước đây nó là
+  # `restart: unless-stopped` nên tự sống lại và CHIẾM CỔNG 3000, làm `npm run dev`
+  # trên host báo `EADDRINUSE 0.0.0.0:3000` mà netstat không thấy tiến trình nào —
+  # cổng nằm trong tiến trình proxy của Docker, không phải của Node.
+  #
+  # Muốn chạy có chủ đích:  docker compose --profile docker-only up -d api
   api:
     build:
       context: ./packages/api
       dockerfile: Dockerfile
     container_name: affiliate_api
-    restart: unless-stopped
+    profiles: ["docker-only"]
+    restart: "no"
     ports:
       - "${API_PORT:-3000}:3000"
     environment:
@@ -47,7 +60,7 @@ services:
       PORT: 3000
       NODE_ENV: ${NODE_ENV:-development}
       # Thời gian xử lý trung bình 1 job (giây) - dựa trên đo lường thực tế
-      AVG_JOB_SECONDS: ${AVG_JOB_SECONDS:-40}
+      AVG_JOB_SECONDS: ${AVG_JOB_SECONDS:-45}
     depends_on:
       postgres:
         condition: service_healthy

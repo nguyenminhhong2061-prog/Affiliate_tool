@@ -7,7 +7,7 @@
  *   2. Điện thoại đã kết nối USB + USB Debugging bật
  *   3. YouTube Studio đã cài trên điện thoại
  */
-import { AppiumYoutubeStudio } from '../automation/appiumYoutubeStudio';
+import { AppiumYoutubeStudio, disposeSharedAppiumSession } from '../automation/appiumYoutubeStudio';
 import { extractAffiliateFromCollection } from '../automation/collectionAffiliateExtractor';
 
 const SHOPEE_URL = process.env.TEST_SHOPEE_URL ?? 'https://vn.shp.ee/5YoD5Mjh';
@@ -63,6 +63,8 @@ async function main() {
     process.exitCode = 1;
   } finally {
     await studio.close();
+    // Script chạy lẻ: phải đóng hẳn session, không giữ lại cho lần sau
+    await disposeSharedAppiumSession();
   }
 }
 

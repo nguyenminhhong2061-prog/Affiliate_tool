@@ -1,5 +1,5 @@
 import { Queue } from 'bullmq';
-import { redis } from '../redis';
+import { createRedisConnection } from '../redis';
 
 // Tên hàng đợi chính của hệ thống
 export const YOUTUBE_TAGGING_QUEUE_NAME = 'youtube-tagging';
@@ -13,8 +13,8 @@ export interface YoutubeTaggingJobData {
 
 // Khởi tạo BullMQ Queue Producer
 export const youtubeQueue = new Queue<YoutubeTaggingJobData>(YOUTUBE_TAGGING_QUEUE_NAME, {
-  // Dùng chung ioredis connection
-  connection: redis,
+  // Kết nối riêng — xem ghi chú trong redis.ts
+  connection: createRedisConnection(),
   defaultJobOptions: {
     // Tự động xoá job đã hoàn thành sau 24h hoặc tối đa 1000 jobs
     removeOnComplete: { age: 86400, count: 1000 },

@@ -21,6 +21,9 @@ npm-debug.log*
 pids/
 *.pid
 
+# Toạ độ nhãn học được từ thiết bị — gắn với đúng một máy, không chia sẻ được
+.cache/
+
 # Docker
 .dockerignore
 

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(adb devices *)",
+      "Bash(adb -s rg4lijbinzlb657d shell screencap -p /sdcard/current_screen.png)",
+      "Bash(adb -s rg4lijbinzlb657d pull /sdcard/current_screen.png \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Affiliate_tool\\\\packages\\\\api\\\\logs\\\\ui-dumps\\\\current_screen.png\")",
+      "Bash(adb -s rg4lijbinzlb657d shell \"screencap -p /sdcard/current_screen.png\")",
+      "Bash(MSYS_NO_PATHCONV=1 adb -s rg4lijbinzlb657d pull /sdcard/current_screen.png \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Affiliate_tool\\\\packages\\\\api\\\\logs\\\\ui-dumps\\\\current_screen.png\")",
+      "Bash(adb -s rg4lijbinzlb657d shell \"pm list packages\")",
+      "Bash(adb -s rg4lijbinzlb657d shell \"screencap -p /sdcard/dialog_check.png\")",
+      "Bash(MSYS_NO_PATHCONV=1 adb -s rg4lijbinzlb657d pull /sdcard/dialog_check.png \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Affiliate_tool\\\\packages\\\\api\\\\logs\\\\ui-dumps\\\\dialog_check.png\")",
+      "Bash(npm install *)",
+      "Bash(nvm use *)",
+      "Bash(MSYS_NO_PATHCONV=1 adb -s rg4lijbinzlb657d install -g \"C:\\\\Users\\\\Admin\\\\.appium\\\\node_modules\\\\appium-uiautomator2-driver\\\\node_modules\\\\io.appium.settings\\\\apks\\\\settings_apk-debug.apk\")",
+      "PowerShell(Get-NetTCPConnection -LocalPort 4723 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique | ForEach-Object { Write-Output \"Killing PID $_\"; Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue })",
+      "Bash(nvm install *)",
+      "Bash(grep -oE 'class=\"[^\"]*\"[^>]*bounds=\"\\\\[[0-9]+,2[23][0-9]{2}\\\\]\\\\[[0-9]+,[0-9]+\\\\]\"')",
+      "Bash(MSYS_NO_PATHCONV=1 adb -s rg4lijbinzlb657d shell \"am start -a android.intent.action.VIEW -d 'https://studio.youtube.com/channel/UC3fFeHphb3dQtKcr0RdAOmA/monetization/shopping' -p com.google.android.apps.youtube.creator\")",
+      "Bash(MSYS_NO_PATHCONV=1 adb -s rg4lijbinzlb657d shell \"screencap -p /sdcard/dl.png\")",
+      "Bash(MSYS_NO_PATHCONV=1 adb -s rg4lijbinzlb657d pull /sdcard/dl.png \"packages/api/logs/ui-dumps/deeplink_test.png\")",
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(DRY_RUN=1 TEST_SHOPEE_URL='https://vn.shp.ee/LcvcKnUG' npx ts-node src/scripts/testMobileCollectionTagging.ts)",
+      "Bash(ls -la \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Admin-Desktop-Affiliate-tool\\\\34630eb4-177d-4ecf-88e7-64980f3637b3\\\\tasks\\\\\" 2>&1 | tail -8; echo \"=== screenshots moi nhat ===\"; ls -lat \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Affiliate_tool\\\\packages\\\\api\\\\logs\\\\screenshots\\\\appium\" 2>&1 | head -8)",
+      "Read(//c/Users/Admin/Desktop/Affiliate_tool/**)",
+      "Bash(adb -s rg4lijbinzlb657d shell \"dumpsys power | grep -E 'mWakefulness=|mScreenOn'\")",
+      "Bash(adb -s rg4lijbinzlb657d shell \"dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'\")"
+    ]
+  }
+}

@@ -27,9 +27,9 @@ export const jobs = pgTable('jobs', {
   // Trạng thái job
   status: jobStatusEnum('status').notNull().default('pending'),
 
-  // Kết quả (chỉ có khi status = 'done')
-  resultUrl: text('result_url'),
-  resultVoucher: varchar('result_voucher', { length: 100 }),
+  // CHÚ Ý: link affiliate KHÔNG lưu ở đây. Link do YouTube Shopping sinh ra có
+  // hạn sử dụng, lưu vĩnh viễn sẽ khiến người dùng mở lại và gặp trang lỗi.
+  // Kết quả được giữ tạm trong Redis kèm TTL — xem services/jobResult.ts
 
   // Lý do lỗi (chỉ có khi status = 'failed')
   errorMessage: text('error_message'),
